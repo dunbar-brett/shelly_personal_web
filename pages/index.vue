@@ -1,14 +1,18 @@
 <template>
-  <div class="container">
+  <div class="shelly-web-container">
+    <Gallery></Gallery>
   </div>
 </template>
 
 <script>
+import Gallery from '../components/frontPageGallery';
 export default {
   components: {
+    Gallery
   }
 }
 </script>
 
-<style>
+<style lang='scss'>
+
 </style>
