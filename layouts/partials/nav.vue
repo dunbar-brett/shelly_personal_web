@@ -1,45 +1,44 @@
 <template>
-    <!-- Add fixed-top class for a fixed nav -->
-    <nav class="navbar navbar-expand-lg navbar-light shelly-nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar image goes here</a>
-            <button class="navbar-toggler collapsed" type="button" 
-                    data-toggle="collapse" 
-                    data-target="#navbarNavAltMarkup" 
-                    aria-controls="navbarNavAltMarkup" 
-                    aria-expanded="false" 
-                    aria-label="Toggle navigation"
-                    v-on:click="navToggler()">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav nav navbar-right">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Features</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link disabled" href="#">Disabled</a>
-                </div>
-            </div>
-        </div>
+    <b-navbar toggleable="md"  class="shelly-nav-bar">
+        <b-navbar-brand>Shelly Header</b-navbar-brand>
 
-<!-- 
-<li class="active"><a href="#">Home</a></li>
-<li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1
-        <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-        <li><a href="#">Page 1-1</a></li>
-        <li><a href="#">Page 1-2</a></li>
-        <li><a href="#">Page 1-3</a></li>
-    </ul>
-</li>
-<li><a href="#">Page 2</a></li>
--->
-    </nav>
+        <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-text-collapse" is-nav>
+            <b-navbar-nav class="ml-auto text-right">
+                <b-nav-item-dropdown id="my-nav-dropdown"
+                    text="Dropdown"
+                    toggle-class="nav-link-custom"
+                    right>
+                    <b-dropdown-item>Paintings</b-dropdown-item>
+                    <b-dropdown-divider></b-dropdown-divider>
+                    <b-dropdown-item>Illustrations</b-dropdown-item>
+                </b-nav-item-dropdown>
+                <b-nav-item>About</b-nav-item>
+                <b-nav-item>Store</b-nav-item>
+                <b-nav-item>Contact</b-nav-item>
+                <b-nav-item class="dumb">
+                    <img src="@/assets/shared/social-media/Facebook.png" 
+                            class="social-media-icon"
+                            alt="">
+                </b-nav-item>
+                <b-nav-item class="dumb">
+                    <img src="@/assets/shared/social-media/Insta.png" 
+                            class="social-media-icon"
+                            alt="">
+                </b-nav-item>
+                <b-nav-item class="dumb">
+                    <img src="@/assets/shared/social-media/Youtube.png" 
+                            class="social-media-icon"
+                            alt="">
+                </b-nav-item>
+            </b-navbar-nav>
+        </b-collapse>
+    </b-navbar>
 </template>
 
 <script>
+
 export default {
     methods: {
         navToggler() {
@@ -52,7 +51,18 @@ export default {
 
 <style lang="scss">
 
-.shelly-nav {
-  background-color: $shelly-web-light-blue;
+.shelly-nav-bar {
+    background-color: $shelly-web-light-blue;
+    // TODO: Image scaling is bonkers. might need smaller images
+    // .dumb {
+    //     width: 5%;
+        
+    //     .social-media-icon {
+    //         width: 90%;
+    //         height: 90%;
+    //     }
+    // }
 }
+
+
 </style>
