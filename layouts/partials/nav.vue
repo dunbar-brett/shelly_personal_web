@@ -1,6 +1,6 @@
 <template>
     <!-- Add fixed-top class for a fixed nav -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light shelly-nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar image goes here</a>
             <button class="navbar-toggler collapsed" type="button" 
@@ -50,6 +50,10 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss">
+@import '@/assets/scss/custom.scss';
 
+.shelly-nav {
+  background-color: $shelly-web-light-blue;
+}
 </style>

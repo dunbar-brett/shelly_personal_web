@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container shelly-container">
   </div>
 </template>
 
@@ -10,5 +10,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '@/assets/scss/custom.scss';
+
+.shelly-container {
+  background-color: $shelly-web-light-blue !important;
+}
 </style>
