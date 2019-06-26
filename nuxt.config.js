@@ -38,10 +38,16 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
+    '@nuxtjs/style-resources'
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
     bootstrapVueCSS: false // Or `bvCSS: false`
+  },
+  styleResources: {
+    scss: [
+        '@/assets/scss/vars/*.scss',
+    ]
   },
   /*
   ** Build configuration

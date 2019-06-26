@@ -11,7 +11,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/custom.scss';
 
 .shelly-container {
   background-color: $shelly-web-light-blue !important;

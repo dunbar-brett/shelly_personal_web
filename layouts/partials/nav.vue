@@ -51,7 +51,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/custom.scss';
 
 .shelly-nav {
   background-color: $shelly-web-light-blue;
