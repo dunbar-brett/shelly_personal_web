@@ -16,11 +16,6 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'}
 
     ],
-    script: [
-      {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'
-      }
-    ]
   },
   /*
   ** Customize the progress-bar color
@@ -30,7 +25,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/scss/main.scss'
+    './assets/scss/custom.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -44,6 +39,10 @@ export default {
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
   ],
+  bootstrapVue: {
+    bootstrapCSS: false, // Or `css: false`
+    bootstrapVueCSS: false // Or `bvCSS: false`
+  },
   /*
   ** Build configuration
   */
