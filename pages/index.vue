@@ -13,6 +13,5 @@ export default {
 <style lang="scss">
 
 .shelly-container {
-  background-color: $shelly-web-light-blue !important;
 }
 </style>
