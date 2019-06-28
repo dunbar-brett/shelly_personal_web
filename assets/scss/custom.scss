@@ -13,13 +13,7 @@ html {
 // custom.scss
 
 // Custom overrides go first
-$grid-breakpoints: (
-  xs: 0,
-  sm: 480px,
-  md: 640px,
-  lg: 992px,
-  xl: 1300px
-);
+
 
 // Then include the following
 @import 'bootstrap/scss/bootstrap.scss';

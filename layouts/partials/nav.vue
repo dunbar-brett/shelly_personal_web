@@ -53,9 +53,6 @@ export default {
 
 </script>
 
-<<<<<<< HEAD
-<style lang='scss'>
-=======
 <style lang="scss">
 /// $shelly-web-light-blue; color for menu dropdown background TODO
 /// TODO: overflow-x: hidden
@@ -85,6 +82,5 @@ export default {
     }
 }
 
->>>>>>> dev_navbar-fix
 
 </style>
