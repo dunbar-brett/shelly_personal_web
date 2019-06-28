@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Nav></Nav>
+    <Nav />
     <nuxt />
   </div>
 </template>
@@ -15,6 +15,5 @@ export default {
 }
 </script>
 
-
-<style lang='scss'>
+<style lang="scss">
 </style>

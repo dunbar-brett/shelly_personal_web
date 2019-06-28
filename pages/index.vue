@@ -1,5 +1,5 @@
 <template>
-  <div class="shelly-web-container">
+  <div class="container shelly-container">
     <Gallery></Gallery>
   </div>
 </template>
@@ -13,6 +13,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
-
+<style lang="scss">
+.shelly-container {
+}
 </style>

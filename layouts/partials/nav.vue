@@ -1,26 +1,90 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-            </div>
-        </div>
-    </nav>
+    <b-navbar toggleable="md"  class="shelly-nav-bar">
+        <b-navbar-brand>
+            <img src="@/assets/shared/header-logo.png" 
+                 class="brand-image"
+                 alt="">
+        </b-navbar-brand>
+
+        <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-text-collapse" is-nav>
+            <b-navbar-nav class="ml-auto text-right">
+                <b-nav-item-dropdown id="my-nav-dropdown"
+                    text="Dropdown"
+                    toggle-class="nav-link-custom"
+                    right>
+                    <b-dropdown-item>Paintings</b-dropdown-item>
+                    <b-dropdown-divider></b-dropdown-divider>
+                    <b-dropdown-item>Illustrations</b-dropdown-item>
+                </b-nav-item-dropdown>
+                <b-nav-item>About</b-nav-item>
+                <b-nav-item>Store</b-nav-item>
+                <b-nav-item>Contact</b-nav-item>
+                <b-nav-item>
+                    <img src="@/assets/shared/social-media/Facebook.png" 
+                            class="social-media-icon"
+                            alt="">
+                </b-nav-item>
+                <b-nav-item>
+                    <img src="@/assets/shared/social-media/Insta.png" 
+                            class="social-media-icon"
+                            alt="">
+                </b-nav-item>
+                <b-nav-item>
+                    <img src="@/assets/shared/social-media/Youtube.png" 
+                            class="social-media-icon"
+                            alt="">
+                </b-nav-item>
+            </b-navbar-nav>
+        </b-collapse>
+    </b-navbar>
 </template>
 
 <script>
-export default {
 
+export default {
+    methods: {
+        navToggler() {
+            console.log('nav toggle clicked');
+        }
+    }
 }
+
 </script>
 
+<<<<<<< HEAD
 <style lang='scss'>
+=======
+<style lang="scss">
+/// $shelly-web-light-blue; color for menu dropdown background TODO
+/// TODO: overflow-x: hidden
+.shelly-nav-bar {
+    background-color: white;
+
+    // roughly tablet up
+    @media (min-width: map-get($grid-breakpoints, md)){
+        height: 5.2rem; 
+    }
+
+    .social-media-icon {
+        object-fit: cover;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .brand-image {
+        object-fit: cover;
+        width: 13rem;
+        height: 2rem;
+
+        @media (min-width: map-get($grid-breakpoints, sm)){
+            width: 15rem;
+            height: 3rem;
+        }
+    }
+}
+
+>>>>>>> dev_navbar-fix
 
 </style>
