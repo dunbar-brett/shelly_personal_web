@@ -55,7 +55,7 @@ export default {
 
 <style lang="scss">
 /// $shelly-web-light-blue; color for menu dropdown background TODO
-
+/// TODO: overflow-x: hidden
 .shelly-nav-bar {
     background-color: white;
 
@@ -66,8 +66,8 @@ export default {
 
     .social-media-icon {
         object-fit: cover;
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .brand-image {
