@@ -1,5 +1,5 @@
 <template>
-  <div class="container shelly-container">
+  <div>
     <Gallery></Gallery>
   </div>
 </template>
@@ -15,5 +15,8 @@ export default {
 
 <style lang="scss">
 .shelly-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 200vw;
 }
 </style>

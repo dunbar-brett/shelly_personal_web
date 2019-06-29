@@ -10,6 +10,7 @@
 
         <b-collapse id="nav-text-collapse" is-nav>
             <b-navbar-nav class="ml-auto text-right">
+                <!-- Change these links to nuxt links -->
                 <b-nav-item-dropdown id="my-nav-dropdown"
                     text="Dropdown"
                     toggle-class="nav-link-custom"
@@ -81,6 +82,4 @@ export default {
         }
     }
 }
-
-
 </style>
