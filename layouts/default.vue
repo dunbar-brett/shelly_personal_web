@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shelly-container">
     <Nav />
     <nuxt />
   </div>
@@ -16,4 +16,5 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '@/assets/scss/main.scss';
 </style>

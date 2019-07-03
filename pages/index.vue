@@ -14,9 +14,5 @@ export default {
 </script>
 
 <style lang="scss">
-.shelly-container {
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 200vw;
-}
+
 </style>

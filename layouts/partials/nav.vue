@@ -56,14 +56,13 @@ export default {
 
 <style lang="scss">
 /// $shelly-web-light-blue; color for menu dropdown background TODO
-/// TODO: overflow-x: hidden
 .shelly-nav-bar {
     background-color: white;
 
     // roughly tablet up
-    @media (min-width: map-get($grid-breakpoints, md)){
-        height: 5.2rem; 
-    }
+   // @media (min-width: map-get($grid-breakpoints, md)){
+        height: 6vh;//5.2rem; 
+    //}
 
     .social-media-icon {
         object-fit: cover;

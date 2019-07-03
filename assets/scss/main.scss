@@ -1,4 +1,4 @@
-// global vars
+
 
 // colors
 $shelly-web-light-blue: #91d8dd;
@@ -16,4 +16,7 @@ html {
 
 .shelly-web-container {
     width: 100%;
+}
+body {
+    overflow-x: hidden;
 }
