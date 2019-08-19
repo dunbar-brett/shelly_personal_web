@@ -41,7 +41,16 @@ export default {
 .front-page-gallery {
     .carousel-item {
       height: 94vh;
-      //width: 100%;
+      min-height: 94vh;
+      // img {
+      //   width: 200%;
+      // }
+      //width: 100vw;
+      // position: relative;
+    //   left: -172.011px;
+    // top: 0px;
+    // width: 3156.55px;
+    // height: 2269px;
     }
 }
 </style>

@@ -59,10 +59,11 @@ export default {
 .shelly-nav-bar {
     background-color: white;
 
+        //height: 10vh;
     // roughly tablet up
-   // @media (min-width: map-get($grid-breakpoints, md)){
+    @media (min-width: map-get($grid-breakpoints, md)){
         height: 6vh;//5.2rem; 
-    //}
+    }
 
     .social-media-icon {
         object-fit: cover;
