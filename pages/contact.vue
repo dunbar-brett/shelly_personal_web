@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>I am the paintings page</h1>
+      <h1>I am the contact page</h1>
   </div>
 </template>
 

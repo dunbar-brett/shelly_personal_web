@@ -12,30 +12,47 @@
             <b-navbar-nav class="ml-auto text-right">
                 <!-- Change these links to nuxt links -->
                 <b-nav-item-dropdown id="my-nav-dropdown"
-                    text="Dropdown"
+                    class="clickable"
+                    text="Portfolio"
                     toggle-class="nav-link-custom"
                     right>
-                    <b-dropdown-item>Paintings</b-dropdown-item>
+                    <b-dropdown-item class="clickable">
+                        <nuxt-link to="/paintings">Paintings</nuxt-link>
+                    </b-dropdown-item>
                     <b-dropdown-divider></b-dropdown-divider>
-                    <b-dropdown-item>Illustrations</b-dropdown-item>
+                    <b-dropdown-item class="clickable">
+                        <nuxt-link to="/illustrations">Illustrations</nuxt-link>
+                    </b-dropdown-item>
                 </b-nav-item-dropdown>
-                <b-nav-item>About</b-nav-item>
-                <b-nav-item>Store</b-nav-item>
-                <b-nav-item>Contact</b-nav-item>
-                <b-nav-item>
-                    <img src="@/assets/shared/social-media/Facebook.png" 
-                            class="social-media-icon"
-                            alt="">
+                <b-nav-item class="clickable">
+                    <nuxt-link to="/about">About</nuxt-link>
                 </b-nav-item>
-                <b-nav-item>
-                    <img src="@/assets/shared/social-media/Insta.png" 
-                            class="social-media-icon"
-                            alt="">
+                <b-nav-item class="clickable">
+                    <a href="https://society6.com/shellyweasel">Store</a>
                 </b-nav-item>
-                <b-nav-item>
-                    <img src="@/assets/shared/social-media/Youtube.png" 
-                            class="social-media-icon"
-                            alt="">
+                <b-nav-item class="clickable">
+                    <nuxt-link to="/contact">Contact</nuxt-link>
+                </b-nav-item>
+                <b-nav-item class="clickable">
+                    <a href="https://www.facebook.com/ShellyJ.Weasel/">
+                        <img src="@/assets/shared/social-media/Facebook.png" 
+                                class="social-media-icon"
+                                alt="Shelly Weasel Facebook">
+                    </a>
+                </b-nav-item>
+                <b-nav-item class="clickable">
+                    <a href="https://www.instagram.com/shelly_weasel/">
+                        <img src="@/assets/shared/social-media/Insta.png" 
+                                class="social-media-icon"
+                                alt="Shelly Weasel Instagram">
+                    </a>
+                </b-nav-item>
+                <b-nav-item class="clickable">
+                    <a href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw">
+                        <img src="@/assets/shared/social-media/Youtube.png" 
+                                class="social-media-icon"
+                                alt="Shelly Weasel YouTube">
+                    </a>
                 </b-nav-item>
             </b-navbar-nav>
         </b-collapse>
@@ -80,6 +97,10 @@ export default {
             width: 15rem;
             height: 3rem;
         }
+    }
+
+    a {
+        color: black;
     }
 }
 </style>
