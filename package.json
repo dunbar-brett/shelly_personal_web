@@ -13,9 +13,13 @@
   "dependencies": {
     "bootstrap": "^4.1.3",
     "bootstrap-vue": "^2.0.0-rc.24",
+<<<<<<< HEAD
     "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
     "slick-carousel": "^1.8.1",
+=======
+    "nuxt": "^2.0.0",
+>>>>>>> 68f32bcb0e3e8df03ae92b84eba6c928bd3634fc
     "vue-slick": "^1.1.15"
   },
   "devDependencies": {
