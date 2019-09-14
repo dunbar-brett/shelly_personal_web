@@ -1,14 +1,17 @@
 <template>
   <div>
-    <Gallery></Gallery>
+    <!-- <Gallery></!-->
+    <SlickGallery></SlickGallery>
   </div>
 </template>
 
 <script>
 import Gallery from '../components/frontPageGallery';
+import SlickGallery from '../components/slickGallery';
+
 export default {
   components: {
-    Gallery
+    SlickGallery
   }
 }
 </script>

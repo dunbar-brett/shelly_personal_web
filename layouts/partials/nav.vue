@@ -1,5 +1,5 @@
 <template>
-    <b-navbar toggleable="md"  class="shelly-nav-bar">
+    <b-navbar toggleable="md" class="shelly-nav-bar" nossr>
         <b-navbar-brand>
             <img src="@/assets/shared/header-logo.png" 
                  class="brand-image"

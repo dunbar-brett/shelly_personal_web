@@ -13,8 +13,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'}
-
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'},
+      { rel: 'stylesheet', type: 'text/css', href: '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css'}
     ],
   },
   /*
@@ -53,10 +53,15 @@ export default {
   ** Build configuration
   */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-    }
+    transpile: ['vue-slick'],
+    // extend (config, { isServer }) {
+    //   if (isServer) {
+    //     config.externals = [
+    //       require('webpack-node-externals')({
+    //         whitelist: [/^vue-slick/]
+    //       })
+    //     ]
+    //   }
+    // }
   }
 }
