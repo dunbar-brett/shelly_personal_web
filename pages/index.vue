@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shelly-home">
     <Gallery></Gallery>
   </div>
 </template>
@@ -14,5 +14,8 @@ export default {
 </script>
 
 <style lang="scss">
-
+// this is probably really bad
+body {
+  overflow: hidden;
+}
 </style>

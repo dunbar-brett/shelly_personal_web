@@ -8,3 +8,31 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1300px
 );
+
+
+/*
+for-phone-only == max-width: 599px
+for-tablet-portrait-up == min-width: 600px
+for-tablet-landscape-up == min-width: 900px
+for-desktop-up == min-width: 1200px
+for-big-desktop-up == min-width: 1800px
+*/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-md-desktop-up {
+  @media (min-width: 1400px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
