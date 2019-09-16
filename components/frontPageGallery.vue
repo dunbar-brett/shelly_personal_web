@@ -40,7 +40,8 @@ export default {
 </script>
 
 <style lang='scss'>
-//todo, position the indicators better
+// TODO: finish other break points
+
 .front-page-gallery {
   width: 100%;
   overflow:hidden; /*hide bounds of image */
