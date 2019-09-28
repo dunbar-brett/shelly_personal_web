@@ -1,6 +1,6 @@
 <template>
     <b-navbar toggleable="md"  class="shelly-nav-bar">
-        <b-navbar-brand>
+        <b-navbar-brand :to="'/'">
             <img src="@/assets/shared/header-logo.png" 
                  class="brand-image"
                  alt="">
@@ -16,13 +16,15 @@
                     text="Portfolio"
                     toggle-class="nav-link-custom"
                     right>
-                    <b-dropdown-item>Paintings</b-dropdown-item>
+                    <b-nav-item :to="'oils-gallery'">Oil</b-nav-item>
                     <!-- <b-dropdown-divider></b-dropdown-divider> -->
-                    <b-dropdown-item>Illustrations</b-dropdown-item>
+                    <b-nav-item :to="'water-color-gallery'">Watercolor</b-nav-item>
                 </b-nav-item-dropdown>
-                <b-nav-item class="sw-nav-link">About</b-nav-item>
-                <b-nav-item class="sw-nav-link">Store</b-nav-item>
-                <b-nav-item class="sw-nav-link">Contact</b-nav-item>
+                <b-nav-item :to="'about'" class="sw-nav-link">About</b-nav-item>
+                <b-nav-item href="https://society6.com/shellyweasel"
+                            target="_blank"
+                            class="sw-nav-link">Store</b-nav-item>
+                <b-nav-item :to="'oils-gallery'" class="sw-nav-link">Contact</b-nav-item>
                 <b-nav-item>
                     <img src="@/assets/shared/social-media/Facebook.png" 
                             class="social-media-icon"
@@ -56,7 +58,6 @@ export default {
 </script>
 
 <style lang="scss">
-/// $sw-light-blue; color for menu dropdown background TODO
 .shelly-nav-bar {
     background-color: white;
 
@@ -77,11 +78,29 @@ export default {
         border-radius: 0;
 
         &.show{
+            background: rgba(145,216,221, 0.7); // why doesn't $sw-light-blue
+
             ul {
-                background-color: $sw-light-blue;
+                //opacity: 0.5;
+                background: rgba(145,216,221, 0.7); // why doesn't $sw-light-blue
+                min-width: 11rem;
+                top: 96%;
+                border: none;
+                border-radius: 0;
+
                 li {
                     padding: 0.5rem 0;
+                    a {
+                        color: black;
+                        text-align: center;
+                    }
                 }
+            }
+        }
+        .nav-item {
+            a:hover {
+                opacity: 1;
+                color: white;
             }
         }
     }

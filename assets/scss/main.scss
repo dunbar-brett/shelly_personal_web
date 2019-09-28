@@ -1,7 +1,8 @@
 
 
 // colors
-$sw-light-blue: #91d8dd;
+$sw-light-blue: rgba(145,216,221, 0.1);// #91d8dd;
+$sw-light-blue-fallback: rgb(145,216,221);// #91d8dd;
 
 html {
     font-family: 'Lato', sans-serif !important;
