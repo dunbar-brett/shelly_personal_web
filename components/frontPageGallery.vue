@@ -75,6 +75,16 @@ export default {
       left: -10rem;
     }
 
+    @include for-tablet-portrait-up {
+      width: 80rem;
+      left: -10rem;
+    }
+
+    @include for-tablet-landscape-up {
+      width: 88rem;
+      left: -3rem;
+    }
+
     @include for-md-desktop-up {
       left: 0;
     }
@@ -85,11 +95,30 @@ export default {
       width: 66rem;
     }
 
+    @include for-tablet-portrait-up {
+      left: -14rem;
+      width: 88rem;
+    }
+
+    @include for-tablet-landscape-up {
+      left: -8rem;
+      width: 87rem;
+    }
+
   }
   .house {
     @include for-phone-only {
       left: -15rem;
       width: 72rem;
+    }
+
+    @include for-tablet-portrait-up {
+      left: -13rem;
+      width: 92rem;
+    }
+
+    @include for-tablet-landscape-up {
+      left: -6rem;
     }
   }
 }
