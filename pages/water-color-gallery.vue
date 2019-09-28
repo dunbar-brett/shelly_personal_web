@@ -1,5 +1,5 @@
 <template>
-    
+    <h1>I am water color gallery</h1>
 </template>
 
 <script>

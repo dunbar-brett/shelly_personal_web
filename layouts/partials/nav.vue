@@ -12,16 +12,17 @@
             <b-navbar-nav class="ml-auto text-right">
                 <!-- Change these links to nuxt links -->
                 <b-nav-item-dropdown id="my-nav-dropdown"
-                    text="Dropdown"
+                    class="sw-nav-link"
+                    text="Portfolio"
                     toggle-class="nav-link-custom"
                     right>
                     <b-dropdown-item>Paintings</b-dropdown-item>
-                    <b-dropdown-divider></b-dropdown-divider>
+                    <!-- <b-dropdown-divider></b-dropdown-divider> -->
                     <b-dropdown-item>Illustrations</b-dropdown-item>
                 </b-nav-item-dropdown>
-                <b-nav-item>About</b-nav-item>
-                <b-nav-item>Store</b-nav-item>
-                <b-nav-item>Contact</b-nav-item>
+                <b-nav-item class="sw-nav-link">About</b-nav-item>
+                <b-nav-item class="sw-nav-link">Store</b-nav-item>
+                <b-nav-item class="sw-nav-link">Contact</b-nav-item>
                 <b-nav-item>
                     <img src="@/assets/shared/social-media/Facebook.png" 
                             class="social-media-icon"
@@ -55,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss">
-/// $shelly-web-light-blue; color for menu dropdown background TODO
+/// $sw-light-blue; color for menu dropdown background TODO
 .shelly-nav-bar {
     background-color: white;
 
@@ -63,6 +64,26 @@ export default {
     // roughly tablet up
     @media (min-width: map-get($grid-breakpoints, md)){
         height: 6vh;//5.2rem; 
+    }
+
+    .sw-nav-link {
+        text-transform: uppercase;
+        color: black;
+        padding: 0 2rem;
+    }
+
+    // bootstrap override: bad :(
+    #my-nav-dropdown {
+        border-radius: 0;
+
+        &.show{
+            ul {
+                background-color: $sw-light-blue;
+                li {
+                    padding: 0.5rem 0;
+                }
+            }
+        }
     }
 
     .social-media-icon {
