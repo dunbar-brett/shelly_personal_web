@@ -88,7 +88,35 @@ export default {
     @include for-md-desktop-up {
       left: 0;
     }
+
+    @include for-big-desktop-up {
+      width: 144rem;
+      left: -10rem;
+      top: -21rem;
+    }
   }
+
+  .house {
+    @include for-phone-only {
+      left: -15rem;
+      width: 72rem;
+    }
+
+    @include for-tablet-portrait-up {
+      left: -13rem;
+      width: 92rem;
+    }
+
+    @include for-tablet-landscape-up {
+      left: -6rem;
+    }
+    
+    @include for-big-desktop-up {
+      width: 131rem;
+      left: -13rem;
+    }
+  }
+
   .mtn {
     @include for-phone-only {
       left: -20rem;
@@ -105,22 +133,13 @@ export default {
       width: 87rem;
     }
 
-  }
-  .house {
-    @include for-phone-only {
-      left: -15rem;
-      width: 72rem;
-    }
-
-    @include for-tablet-portrait-up {
+    @include for-big-desktop-up {
+      width: 127rem;
       left: -13rem;
-      width: 92rem;
     }
 
-    @include for-tablet-landscape-up {
-      left: -6rem;
-    }
   }
+  
 }
 /*
 for-phone-only == max-width: 599px
