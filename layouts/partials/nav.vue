@@ -78,24 +78,35 @@ export default {
         border-radius: 0;
 
         &.show{
-            background: rgba(145,216,221, 0.7); // why doesn't $sw-light-blue
+            // desktop
+            @media (min-width: 640px) {
+                background: rgba(145,216,221, 0.7); // why doesn't $sw-light-blue
+            }
 
             ul {
-                //opacity: 0.5;
-                background: rgba(145,216,221, 0.7); // why doesn't $sw-light-blue
                 min-width: 11rem;
-                top: 96%;
+                top: 95%;
                 border: none;
                 border-radius: 0;
-
-                li {
-                    padding: 0.5rem 0;
+                li{
                     a {
-                        color: black;
-                        text-align: center;
+                        text-align: right;
+                    }
+                }
+                // desktop
+                @media (min-width: 640px) { 
+                    //opacity: 0.5;
+                    background: rgba(145,216,221, 0.7); // why doesn't $sw-light-blue
+                    li {
+                        a {
+                            padding: 0.5rem 0;
+                            color: black;
+                            text-align: center;
+                        }
                     }
                 }
             }
+
         }
         .nav-item {
             a:hover {
