@@ -44,7 +44,6 @@
 export default {
   created() {
     this.$nextTick(() => {
-        // document.body.className = '';
         document.documentElement.style.overflow = 'auto';
     });
   }

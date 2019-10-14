@@ -1,5 +1,6 @@
 <template>
   <div class="sw-home-container">
+    <!-- <no-ssr placeholder="loading..."></no-ssr> NOT WORKING -->
     <Nav />
     <nuxt />
   </div>
@@ -12,7 +13,7 @@ export default {
     components: {
         Nav
     },
-    created() {
+    beforeMount() {
         document.documentElement.style.overflow = 'hidden';
     },
 }
