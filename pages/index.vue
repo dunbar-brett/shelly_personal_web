@@ -7,6 +7,7 @@
 <script>
 import Gallery from '../components/frontPageGallery';
 export default {
+  layout: 'home-layout',
   components: {
     Gallery
   }
@@ -14,8 +15,4 @@ export default {
 </script>
 
 <style lang="scss">
-// this is probably really bad
-body {
-  overflow: hidden;
-}
 </style>
