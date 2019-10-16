@@ -7,7 +7,7 @@
                     controls
                     @sliding-start="onSlideStart"
                     @sliding-end="onSlideEnd">
-            <b-carousel-slide class="shelly-carousel-item face" 
+            <!-- <b-carousel-slide class="shelly-carousel-item face" 
                               img-src="@/assets/gallery/squished-face.png">
             </b-carousel-slide>
             <b-carousel-slide class="shelly-carousel-item house" 
@@ -15,9 +15,16 @@
             </b-carousel-slide>
             <b-carousel-slide class="shelly-carousel-item mtn" 
                               img-src="@/assets/gallery/mountain.png">
-            </b-carousel-slide>
+            </b-carousel-slide> -->
+          <!--  -->
+          <b-carousel-slide v-for="image in galleryImages" 
+              :key="image.key"
+              :class="`shelly-carousel-item-2 ${image.class}`"
+              :img-src="require(`@/assets/gallery/${image.path}`)">
+          </b-carousel-slide>
         </b-carousel>
     </div> 
+    <!-- TODO render images -->
 </template>
 
 <script>
@@ -25,8 +32,37 @@ export default {
     data() {
       return {
         slide: 0,
-        sliding: null
+        sliding: null,
+        mobileImages: [
+          {key: 1, path: 'mobile/MHome1.jpg', class: 'mobile'},
+          {key: 2, path: 'mobile/MHome2.jpg', class: 'mobile'},
+          {key: 3, path: 'mobile/MHome3.jpg', class: 'mobile'},
+        ],
+        desktopImages: [
+          {key: 1, path: 'desktop/Home1.jpg', class: 'desktop'},
+          {key: 2, path: 'desktop/Home2.jpg', class: 'desktop'},
+          {key: 3, path: 'desktop/Home3.jpg', class: 'desktop'},
+        ],
+        // galleryFilePath: [],
       }
+    },
+    computed: {
+      galleryImages() {
+        if (this.displayIsPortrait) {
+          return this.mobileImages;
+        } else {
+          return this.desktopImages;
+        }
+      },
+      displayIsPortrait() {
+        if (window) {
+          return window.innerWidth < window.innerHeight;
+        } else {
+          return false;
+        }
+      }
+    },
+    mounted() {
     },
     methods: {
       onSlideStart(slide) {
@@ -34,18 +70,33 @@ export default {
       },
       onSlideEnd(slide) {
         this.sliding = false
-      }
+      },
     }
 }
 </script>
 
 <style lang='scss'>
-// TODO: finish other break points
-
 .front-page-gallery {
   width: 100%;
   overflow:hidden; /*hide bounds of image */
   margin:0;   /*reset margin of figure tag*/
+
+  .shelly-carousel-item-2 {
+    &.desktop {
+      img {
+        height: 100vh;
+      }
+    }
+
+    &.mobile {
+      img {
+        width: 100vw;
+      }
+    }
+  }
+
+
+
   .shelly-carousel-item {
     //margin:-21.875% 0;
     //display:block; /*remove inline-block spaces this broke b-carousel*/

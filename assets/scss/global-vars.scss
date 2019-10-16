@@ -9,6 +9,18 @@ $grid-breakpoints: (
   xl: 1300px
 );
 
+.hide-tablet-up {
+  @media (min-width: map-get($grid-breakpoints, md)){
+    display: none;
+  }
+}
+
+.hide-tablet-down {
+  @media (max-width: map-get($grid-breakpoints, md)){
+    display: none;
+  }
+}
+
 
 /*
 for-phone-only == max-width: 599px

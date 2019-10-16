@@ -1,6 +1,8 @@
 <template>
   <div class="shelly-home">
-    <Gallery></Gallery>
+    <no-ssr placeholder="loading...">
+      <Gallery></Gallery>
+    </no-ssr>
   </div>
 </template>
 
