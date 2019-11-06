@@ -82,8 +82,8 @@ export default {
 
       return {
         'animation-name': 'imageAnimation',
-        'animation-duration': this.totalBackgroundImages * 12 + 's',
-        'animation-delay': pos * 12 + 's',
+        'animation-duration': this.totalBackgroundImages * 6 + 's',
+        'animation-delay': pos * 6 + 's',
         'background-image': `url(${image.path})`,
         'animation-iteration-count': 'infinite',
         'animation-fill-mode': 'linear',
