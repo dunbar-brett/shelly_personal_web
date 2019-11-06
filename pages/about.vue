@@ -1,38 +1,58 @@
 <template>
-    <div class="row sw-container">
-        <div class="col">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="@/assets/about/about-hero.jpg" 
-                        alt="Shelly Weasel About Photo"
-                        class="sw-hero-image">
-                </div>
-                <div class="col-md-6">
-                    <p>
-                        What about macaroni – let me finish – salad? Oh, I can just taste those meaty leading man parts in my mouth. I think that's one of Mom's little fibs, you know, like I'll sacrifice anything for my children. You just made a fool out of yourself in front of T-Bone. The CIA should've just Googled for his hideout, evidently.
-    You were just a turd out there, you know? You couldn't kick, and you couldn't run, you know? You were just a turd. Speaking of settling, How's Ann? It's a jetpack, Michael. What could go wrong? If you didn't have adult onset diabetes, I wouldn't mind giving you a little sugar.
-    What have we always said is the most important thing? How do you know Steve Holt? Are you in AA? Chickens don't clap!
-    You stay on top of her Buddy. Don't be afraid to ride her. Hard. Sure, let the little fruit do it. HUZZAH! GENE!! [screams]
-    If this tableau I recreate, perhaps I can re-snare my mate. It walked on my pillow!
-    They frame my junk. You go buy a tape recorder and record yourself for a whole day. I think you'll be surprised at some of your phrasing. She's always got to wedge herself in the middle of us so that she can control everything. Yeah. Mom's awesome. Tobias is Queen Mary. No, I was ashamed to be SEEN with you. I like being WITH you. [Stabbing Gob] White power! Gob: I'm white! Wine only turns to alcohol if you let it sit. We need a name. Maybe "Operation Hot Mother." No, let's try to top that. (They never did.)
-                    </p>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-12">
-                    <h1>EXHB</h1>
-                    <div class="row">
-                        <div class="col-3">Date</div>
-                        <div class="col-9">Title</div>
+    <div class="container">
+        <div class="row contact-container">
+            <div class="col">
+                <div class="row">
+                    <div class="col-md-6 align-self-center">
+                        <img src="@/assets/about/about-hero.jpg" 
+                            alt="Shelly Weasel About Photo"
+                            class="sw-hero-image">
                     </div>
-                    <div class="row">
-                        <div class="col-3">Date</div>
-                        <div class="col-9">Title</div>
+                    <div class="col-md-6 align-self-center">
+                        <!-- <h1 class="text-center contact-title">Hi! My name is Shelly.</h1> -->
+                        <p class="contact-copy">
+                            Shelly Weasel Contemporary artist. Born in Defiance, Ohio, she has 
+                            lived in Tucson, AZ and currently resides in Portland, OR. 
+                        </p>
+                        <p class="contact-copy">
+                            She is mostly known for portraiture using watercolor, paintings created by 
+                            underpainting with inks, watercolor over, with hand sewn details on heavy 
+                            paper. She also paints using oil and egg tempera, mixing her own paints, 
+                            using traditional techniques. 
+                        </p>
                     </div>
-                    <div class="row">
-                        <div class="col-3">Date</div>
-                        <div class="col-9">Title</div>
+                </div>
+                <div class="row social-media-icons">
+                    <div class="col-md-6 col-sm-12 text-center">
+                        <a href="https://www.facebook.com/ShellyJ.Weasel/" class="social-media-icon">
+                            <img src="@/assets/shared/social-media/Facebook.png"/>
+                        </a>
+                        <a href="https://www.instagram.com/shelly_weasel/" class="social-media-icon">
+                            <img src="@/assets/shared/social-media/Insta.png"/>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw"
+                            target="_blank"
+                            class="social-media-icon">
+                            <img src="@/assets/shared/social-media/Youtube.png"/>
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-12">
+                        <h1>EXHIBITIONS:</h1>
+                        <div class="row">
+                            <div class="col-3">Date</div>
+                            <div class="col-9">Title</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Date</div>
+                            <div class="col-9">Title</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">Date</div>
+                            <div class="col-9">Title</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,9 +71,43 @@ export default {
 </script>
 
 <style lang="scss">
-.sw-container {
+.contact-container {
+    padding-top: 4rem;
+
     .sw-hero-image {
         max-width: 100%;
+        // tablet below
+        @media (max-width: map-get($grid-breakpoints, md)) {
+            padding-bottom: 2rem;
+        }
+    }
+
+    .contact-title {
+        font-size: 3rem;
+    }
+    .contact-copy {
+        line-height: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .social-media-icons {
+        padding-top: 1.5rem;
+
+        .social-media-icon {
+            img {
+                width: 3.5rem;
+                height: 3.5rem;
+                @media (max-width: map-get($grid-breakpoints, md)) {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+        }
+        .social-media-icon:not(:first-of-type) {
+            img {
+                margin-left: 1rem;
+            }
+        }
     }
 }
 
