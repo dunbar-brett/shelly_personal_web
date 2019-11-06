@@ -1,87 +1,100 @@
 <template>
-  <ul class="cb-slideshow">
-        <li v-for="image in images" :key="image.id">
-            <span :style="backgroundClass(image)"></span>
-        </li>
+  <div>
+    <ul class="cb-slideshow hide-tablet-up">
+      <li v-for="image in mobileImages" 
+          :key="image.id">
+          <span :style="backgroundClass(image, mobileImages)"></span>
+      </li>
     </ul>
+    <ul class="cb-slideshow hide-tablet-down">
+      <li v-for="image in desktopImages" 
+        :key="image.id">
+        <span :style="backgroundClass(image, desktopImages)"></span>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-    data: function() {
-        return {
-            images: [
-                {
-                    id: 1,
-                    title: 'sports 1',
-                    path: 'images/Home1.jpg'
-                }, 
-                {
-                    id: 2,
-                    title: 'sports 2',
-                    path: 'images/Home2.jpg'
-                }, 
-                {
-                    id: 3,
-                    title: 'sports 3',
-                    path: 'images/Home3.jpg'
-                }, 
-                // {
-                //     id: 4,
-                //     title: 'sports 4',
-                //     path: 'https://lorempixel.com/1920/1080/sports/7/'
-                // }, 
-                // {
-                //     id: 5,
-                //     title: 'sports 5',
-                //     path: 'https://lorempixel.com/1920/1080/sports/5/'
-                // }, 
-                // {
-                //     id: 6,
-                //     title: 'sports 6',
-                //     path: 'https://lorempixel.com/1920/1080/sports/6/'
-                // }
-            ]
-        }
-    },
-    computed: {
-        totalBackgroundImages() {
-            return this.images.length;
-        }
-    },
-    methods: {
-        backgroundClass(image) {
-            // determine place of image in array
-            let pos = this.images.map(function(x) {
-                    return x.id;
-                }).indexOf(image.id);
-            console.log(pos)
-            if (pos > 0) {
-                let styles = {
-                    'animation-delay': pos * 6 + 's',
-                    'background-image': `url(${image.path})`,
-                    'animation': 'imageAnimation ' + this.totalBackgroundImages * 6 + 's linear infinite 0s'
-                }
-                console.log(styles);
-                return styles;
-            }
-            return {
-                'background-image': `url(${image.path})`,
-            }
+  data: function() {
+    return {
+      desktopImages: [
+        {
+          id: 1,
+          path: 'gallery/desktop/Home1.jpg'
+        }, 
+        {
+          id: 2,
+          path: 'gallery/desktop/Home2.jpg'
+        }, 
+        {
+          id: 3,
+          path: 'gallery/desktop/Home3.jpg'
         },
-        titleClass(image) {
-            // determine place of image in array
-            let pos = this.images.map(function(x) {
-                    return x.id;
-                }).indexOf(image.id);
-            console.log(pos)
-            if (pos > 0) {
-                return {
-                    'animation-delay': pos * 6 + 's'
-                }
-            }
+        {
+          id: 4,
+          path: 'gallery/desktop/Home1.jpg'
+        }, 
+        {
+          id: 5,
+          path: 'gallery/desktop/Home2.jpg'
+        }, 
+        {
+          id: 6,
+          path: 'gallery/desktop/Home3.jpg'
+        }, 
+      ],
+      mobileImages: [
+        {
+          id: 1,
+          path: 'gallery/mobile/MHome1.jpg'
+        }, 
+        {
+          id: 2,
+          path: 'gallery/mobile/MHome2.jpg'
+        }, 
+        {
+          id: 3,
+          path: 'gallery/mobile/MHome3.jpg'
         },
+        {
+          id: 4,
+          path: 'gallery/mobile/MHome1.jpg'
+        }, 
+        {
+          id: 5,
+          path: 'gallery/mobile/MHome2.jpg'
+        }, 
+        {
+          id: 6,
+          path: 'gallery/mobile/MHome3.jpg'
+        }, 
+      ],
+    }
+  },
+  methods: {
+    backgroundClass(image, images) {
+      // determine place of image in array
+      let pos = images.map(function(x) {
+        return x.id;
+      }).indexOf(image.id);
+
+      return {
+        'animation-name': 'imageAnimation',
+        'animation-duration': this.totalBackgroundImages * 12 + 's',
+        'animation-delay': pos * 12 + 's',
+        'background-image': `url(${image.path})`,
+        'animation-iteration-count': 'infinite',
+        'animation-fill-mode': 'linear',
+      }
     },
+  },
+  computed: {
+    totalBackgroundImages() {
+      return this.mobileImages.length;
+    }
+  },
 }
 </script>
 
@@ -94,7 +107,7 @@ export default {
   /* top: 0px; */
   left: 0px;
   z-index: 0;
-  list-style: none;
+  list-style-type: none;
 }
 
 .cb-slideshow:after {
@@ -113,7 +126,6 @@ export default {
   background-repeat: none;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 36s linear infinite 0s;
 }
 
 .cb-slideshow li div {
@@ -125,7 +137,6 @@ export default {
   text-align: center;
   opacity: 0;
   color: #fff;
-  animation: titleAnimation 36s linear infinite 0s;
 }
 
 .cb-slideshow li div h3 {
@@ -146,51 +157,12 @@ export default {
   }
   17% {
     opacity: 1;
-    /* transform: scale(1.1) rotate(2deg); */
   }
   25% {
     opacity: 0;
-    /* transform: scale(1.1) rotate(2deg); */
   }
   100% {
-    opacity: 0
-  }
-}
-
-@keyframes titleAnimation {
-  0% {
     opacity: 0;
-    transform: translateX(200px);
-  }
-  8% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  17% {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-  19% {
-    opacity: 0;
-    transform: translateX(400px);
-  }
-  25% {
-    opacity: 0
-  }
-  100% {
-    opacity: 0
-  }
-}
-
-@media screen and (max-width: 1140px) {
-  .cb-slideshow li div h3 {
-    font-size: 100px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .cb-slideshow li div h3 {
-    font-size: 80px
   }
 }
 
