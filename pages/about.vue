@@ -9,7 +9,7 @@
                             class="sw-hero-image">
                     </div>
                     <div class="col-md-6 align-self-center">
-                        <!-- <h1 class="text-center contact-title">Hi! My name is Shelly.</h1> -->
+                        <!-- <h4 class="text-center contact-title">Hi! My name is Shelly.</h4> -->
                         <p class="contact-copy">
                             Shelly Weasel Contemporary artist. Born in Defiance, Ohio, she has 
                             lived in Tucson, AZ and currently resides in Portland, OR. 
@@ -40,18 +40,65 @@
                 <hr>
                 <div class="row">
                     <div class="col-12">
-                        <h1>EXHIBITIONS:</h1>
+                        <h4 cla>EXHIBITIONS:</h4>
                         <div class="row">
-                            <div class="col-3">Date</div>
-                            <div class="col-9">Title</div>
+                            <div class="col-2 text-right">2019</div>
+                            <div class="col-10">
+                                <p>Karuna Horse Rescue Fundraiser Event – Church Ink Tattoos, Tucson AZ</p>
+                            </div>
                         </div>
                         <div class="row">
-                            <div class="col-3">Date</div>
-                            <div class="col-9">Title</div>
+                            <div class="col-2 text-right">2017</div>
+                            <div class="col-10">
+                                <p>B.F.A. Show - University of Arizona, Tucson, AZ</p>
+                                <p>Just Ad Water - University of Arizona, Tucson, AZ</p>
+                                <p>Spring Trunk Show - Bella Starr Salon, Tucson, AZ</p>
+                                <p>Contemporary Art Show Juried Exhibition - The Duce, Phoenix, AZ</p>
+                            </div>
                         </div>
                         <div class="row">
-                            <div class="col-3">Date</div>
-                            <div class="col-9">Title</div>
+                            <div class="col-2 text-right">2016 </div>
+                            <div class="col-10">
+                                <p>Inktober Tucson Benefit Show - Brew House, Tucson, AZ</p>
+                                <p>Summer Show - Boat House Gallery, Tucson, AZ</p>
+                                <p>Opening Doors Exhibition - University of Arizona Museum of Art, Tucson, AZ</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 text-right">2015</div>
+                            <div class="col-10">
+                                <p>Illustration and Design Awards - University of Arizona Museum of Art, Tucson, AZ</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 text-right">2014</div>
+                            <div class="col-10">
+                                <p>Student Exhibition - Tucson International Airport, Tucson, AZ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h4>PRINT</h4>
+                        <div class="row">
+                            <div class="col-2 text-right">2015</div>
+                            <div class="col-10">
+                                <p>Race to the Bottom CD Artwork - Band Reason Will Prevail</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <h4>EDUCATION</h4>
+                        <div class="row">
+                            <div class="col-2 text-right">2017</div>
+                            <div class="col-10">
+                                <p>BFA Illustration &amp; Design, University of Arizona</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2 text-right">2015</div>
+                            <div class="col-10">
+                                <p>Associates in Fine Arts, Pima Community College</p>
+                            </div>
                         </div>
                     </div>
                 </div>
