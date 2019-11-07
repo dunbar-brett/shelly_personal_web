@@ -53,9 +53,6 @@
 <script>
 export default {
     methods: {
-        navToggler() {
-            console.log("nav toggle clicked");
-        }
     }
 };
 </script>
