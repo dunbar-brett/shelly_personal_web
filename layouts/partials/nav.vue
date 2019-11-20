@@ -1,6 +1,6 @@
 <template>
     <b-navbar toggleable="md" class="shelly-nav-bar">
-        <b-navbar-brand :to="'/'">
+        <b-navbar-brand :to="'index'">
             <img src="@/assets/shared/header-logo.png" class="brand-image" alt />
         </b-navbar-brand>
 

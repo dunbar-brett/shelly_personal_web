@@ -1,4 +1,4 @@
-
+const nodeExternals = require('webpack-node-externals')
 export default {
   mode: 'universal',
   /*
@@ -31,6 +31,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    
   ],
   /*
   ** Nuxt.js modules
@@ -57,6 +58,13 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      if (ctx.isServer) {
+        config.externals = [
+          nodeExternals({
+            whitelist: [/^vue-slick/]
+          })
+        ]
+      }
     }
   }
 }

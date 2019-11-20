@@ -1,10 +1,15 @@
 <template>
-    <h1>I am oils gallery</h1>
+    <div>
+        <h1>I am oils gallery</h1>
+        <PortfolioCarousel></PortfolioCarousel>
+    </div>
 </template>
 
 <script>
-export default {
+import PortfolioCarousel from '../components/portfolioCarousel';
 
+export default {
+    components: { PortfolioCarousel },
 }
 </script>
 
