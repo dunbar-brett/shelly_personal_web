@@ -1,5 +1,12 @@
-const nodeExternals = require('webpack-node-externals')
+const nodeExternals = require('webpack-node-externals');
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/shelly_personal_web/'
+  }
+} : {};
+
 export default {
+  ...routerBase,
   mode: 'universal',
   /*
   ** Headers of the page
