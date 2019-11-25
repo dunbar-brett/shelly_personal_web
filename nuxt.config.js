@@ -1,4 +1,13 @@
-const nodeExternals = require('webpack-node-externals')
+const nodeExternals = require('webpack-node-externals');
+const routerBase = {
+  router: {
+    base: '/shelly_website_staged/'
+  }
+};
+
+// add next line to export default when deploying
+//...routerBase, 
+//
 export default {
   mode: 'universal',
   /*
