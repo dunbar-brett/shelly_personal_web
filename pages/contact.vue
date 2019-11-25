@@ -1,8 +1,7 @@
 <template>
     <div class="sw-contact container">
         <section class="contact-header">
-            <h1 class="text-center">Send Me A Message!</h1>
-            <h3 class="text-center">Say 'Hi' or ask about commissions:</h3>
+            <h1 class="text-center">Contact</h1>
         </section>
         <form class="form-wrapper container">
             <div class="form-row sw-row">

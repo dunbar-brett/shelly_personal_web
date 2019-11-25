@@ -21,6 +21,9 @@ $grid-breakpoints: (
   }
 }
 
+@mixin mobile-nav {
+  @media (max-width: map-get($grid-breakpoints, md)) { @content; }
+}
 
 /*
 for-phone-only == max-width: 599px

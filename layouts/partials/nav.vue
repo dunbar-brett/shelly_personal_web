@@ -1,6 +1,8 @@
 <template>
     <b-navbar toggleable="md" class="shelly-nav-bar">
-        <b-navbar-brand :to="'index'">
+        <!-- this was set to index for production -->
+        <!-- <b-navbar-brand :to="'index'"> -->
+        <b-navbar-brand :to="'/'">
             <img src="@/assets/shared/header-logo.png" class="brand-image" alt />
         </b-navbar-brand>
 
@@ -34,17 +36,33 @@
                 <b-nav-item :to="'contact'" class="sw-nav-link">
                     Contact
                 </b-nav-item>
-                <b-nav-item href="https://www.facebook.com/ShellyJ.Weasel/" target="_blank">
+                <b-nav-item href="https://www.facebook.com/ShellyJ.Weasel/"
+                    class="hide-tablet-down" target="_blank">
                     <img src="@/assets/shared/social-media/Facebook.png"
                         class="social-media-icon" alt/>
                 </b-nav-item>
-                <b-nav-item href="https://www.instagram.com/shelly_weasel/" target="_blank">
+                <b-nav-item href="https://www.instagram.com/shelly_weasel/"
+                    class="hide-tablet-down" target="_blank">
                     <img src="@/assets/shared/social-media/Insta.png" class="social-media-icon" alt />
                 </b-nav-item>
-                <b-nav-item href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw" target="_blank">
+                <b-nav-item href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw"
+                    class="hide-tablet-down" target="_blank">
                     <img src="@/assets/shared/social-media/Youtube.png"
                         class="social-media-icon" alt/>
                 </b-nav-item>
+                <b-nav-text class="hide-tablet-up">
+                    <a href="https://www.facebook.com/ShellyJ.Weasel/" target="_blank">
+                        <img src="@/assets/shared/social-media/Facebook.png"
+                            class="social-media-icon" alt/>
+                    </a>
+                    <a href="https://www.instagram.com/shelly_weasel/" target="_blank">
+                        <img src="@/assets/shared/social-media/Insta.png" class="social-media-icon" alt />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw" target="_blank">
+                        <img src="@/assets/shared/social-media/Youtube.png"
+                            class="social-media-icon" alt/>
+                    </a>
+                </b-nav-text>
             </b-navbar-nav>
         </b-collapse>
     </b-navbar>
@@ -133,6 +151,13 @@ export default {
         object-fit: cover;
         width: 1.5rem;
         height: 1.5rem;
+
+
+        @include mobile-nav {
+            width: 2rem;
+            height: 2rem;
+            margin-left: 1rem;
+        }
     }
 
     .brand-image {
