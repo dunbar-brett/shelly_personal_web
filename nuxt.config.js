@@ -6,7 +6,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 } : {};
 
 export default {
-  ...routerBase,
+  router: {
+    base: '/shelly_personal_web/'
+  },
   mode: 'universal',
   /*
   ** Headers of the page
