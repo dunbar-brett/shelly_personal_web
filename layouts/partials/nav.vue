@@ -37,16 +37,16 @@
                     Contact
                 </b-nav-item>
                 <b-nav-item href="https://www.facebook.com/ShellyJ.Weasel/"
-                    class="hide-tablet-down" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
                     <img src="@/assets/shared/social-media/Facebook.png"
                         class="social-media-icon" alt/>
                 </b-nav-item>
                 <b-nav-item href="https://www.instagram.com/shelly_weasel/"
-                    class="hide-tablet-down" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
                     <img src="@/assets/shared/social-media/Insta.png" class="social-media-icon" alt />
                 </b-nav-item>
                 <b-nav-item href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw"
-                    class="hide-tablet-down" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
                     <img src="@/assets/shared/social-media/Youtube.png"
                         class="social-media-icon" alt/>
                 </b-nav-item>
@@ -87,7 +87,11 @@ export default {
     .sw-nav-link {
         text-transform: uppercase;
         color: black;
-        padding: 0 2rem;
+        padding: 0 0rem;
+
+        @include bad-nav-hack-upper {
+            padding: 0 2rem;
+        }
 
         .nav-link {
             color: black;
@@ -151,7 +155,6 @@ export default {
         object-fit: cover;
         width: 1.5rem;
         height: 1.5rem;
-
 
         @include mobile-nav {
             width: 2rem;

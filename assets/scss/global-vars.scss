@@ -10,19 +10,36 @@ $grid-breakpoints: (
 );
 
 .hide-tablet-up {
-  @media (min-width: map-get($grid-breakpoints, md)){
-    display: none;
-  }
+  @media (min-width: map-get($grid-breakpoints, md)) { display: none; }
 }
 
 .hide-tablet-down {
-  @media (max-width: map-get($grid-breakpoints, md)){
-    display: none;
-  }
+  @media (max-width: map-get($grid-breakpoints, md)){ display: none; }
 }
 
 @mixin mobile-nav {
   @media (max-width: map-get($grid-breakpoints, md)) { @content; }
+}
+
+@mixin tablet-up {
+  @media (min-width: map-get($grid-breakpoints, md)){ @content; }
+}
+
+@mixin bad-nav-hack-upper {
+  @media (min-width: 995px) { @content; }
+}
+
+@mixin bad-nav-hack-lower {
+  @media (min-width: 858px) { @content; }
+}
+
+.bad-social-media-hide-hack {
+  @media (max-width: 730px) { display: none; }
+}
+.bad-social-media-show-hack {
+  @media (max-width: 730px) { display: block; }
+  @media (min-width: 730px) { display: none; }
+  @media (max-width: 640px) { display: none; }
 }
 
 /*

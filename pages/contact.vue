@@ -88,7 +88,9 @@ export default {
     }
 
     .form-wrapper {
-        max-width: 34vh;
+        @include tablet-up {
+            max-width: 34vh;
+        }
 
         .text-area {
             resize: none;
