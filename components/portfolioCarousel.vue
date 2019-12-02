@@ -39,11 +39,11 @@
                 path: 'https://i.ytimg.com/vi/HSO_pyXrcTs/hqdefault.jpg'
             },
             {
-                id: 0,
+                id: 1,
                 path: 'https://i.pinimg.com/236x/3f/55/f4/3f55f4487cbf02bf779dd1128b346d3d--orange-sweaters-cat-sweaters.jpg'
             },
             {
-                id: 0,
+                id: 2,
                 path: 'https://img.buzzfeed.com/buzzfeed-static/static/enhanced/terminal01/2010/10/7/14/enhanced-buzz-13063-1286477213-45.jpg'
             },
         ]

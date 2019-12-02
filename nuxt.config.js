@@ -23,7 +23,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'}
-
     ],
   },
   /*
@@ -34,12 +33,14 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/scss/custom.scss'
+    '@/assets/scss/custom.scss',
+    'swiper/dist/css/swiper.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/swiper.js', ssr: false },
     { src: '~/plugins/vue-slick', ssr: false },
     'plugins/BootstrapVue'
   ],
