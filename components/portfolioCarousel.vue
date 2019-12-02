@@ -64,8 +64,8 @@
 .sw-image {
     img{
         width: auto;
-        height: 225px;
-        max-height: 225px;
+        height: auto;
+        max-height: 50vh;
     }
 }
 </style>

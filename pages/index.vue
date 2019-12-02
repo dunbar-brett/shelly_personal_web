@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Gallery from '../components/galleryTwo';
+import Gallery from '../components/fullPageGallery';
 export default {
   layout: 'home-layout',
   components: {

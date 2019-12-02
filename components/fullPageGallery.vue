@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<main>
 		<ul class="cb-slideshow hide-tablet-up">
 			<li v-for="image in mobileImages" :key="image.id">
 				<span :style="backgroundClass(image, mobileImages)"></span>
@@ -10,7 +10,7 @@
 				<span :style="backgroundClass(image, desktopImages)"></span>
 			</li>
 		</ul>
-	</div>
+	</main>
 </template>
 
 <script>

@@ -40,14 +40,15 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    
+    { src: '~/plugins/vue-slick', ssr: false },
+    'plugins/BootstrapVue'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
+    //'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources'
   ],
   bootstrapVue: {
@@ -66,6 +67,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    transpile: ['vue-slick'],
     extend(config, ctx) {
       if (ctx.isServer) {
         config.externals = [
