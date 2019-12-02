@@ -1,23 +1,25 @@
 <template>
     <main class="sw-swiper-wrapper">
-        <Swiper />
+        <Swiper :images="images" />
     </main>
 </template>
 
 <script>
-// TODO needs prop with type of portfolio : illustrations / paintings / etc
-// import Carousel from '../components/portfolioSlickCarousel'
 import Swiper from '../components/awesomeSwiper'
+import * as images from '../assets/portfolio/watercolor/watercolors.js';
+
 export default {
     components: {
         Swiper
+    },
+    data() {
+        return {
+            images: images.watercolors,
+        }
     }
-
 }
 </script>
 
 <style lang="scss">
-.sw-swiper-wrapper {
-    height: 50vh;
-}
+
 </style>

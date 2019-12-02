@@ -11,7 +11,7 @@
         <b-collapse id="nav-text-collapse" is-nav>
             <b-navbar-nav class="ml-auto text-right">
                 <!-- Change these links to nuxt links -->
-                <b-nav-item-dropdown
+                <b-nav-item-dropdown ref="testtest"
                     id="my-nav-dropdown"
                     class="sw-nav-link"
                     text="Portfolio"
@@ -70,8 +70,13 @@
 
 <script>
 export default {
-    methods: {
-    }
+    watch: {
+        '$route' () {
+            //$('#my-nav-dropdown').dropdown('toggle')
+            //debugger;
+            //this.$refs.testtest.dropdown('toggle');
+        }
+    },
 };
 </script>
 

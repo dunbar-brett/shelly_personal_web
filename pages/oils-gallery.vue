@@ -1,18 +1,27 @@
 <template>
     <div>
-        <h1>I am oils gallery</h1>
-        <PortfolioCarousel></PortfolioCarousel>
+        <main class="sw-swiper-wrapper">
+            <no-ssr>
+                <Swiper :images="images" />
+            </no-ssr>
+        </main>
     </div>
 </template>
 
 <script>
-import PortfolioCarousel from '../components/portfolioCarousel';
+import Swiper from '../components/awesomeSwiper'
+import * as images from '../assets/portfolio/oils/oil-paintings.js';
 
 export default {
-    components: { PortfolioCarousel },
+    components: { Swiper },
+    data() {
+        return {
+            images: images.oils,
+        }
+    }
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
