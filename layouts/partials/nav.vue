@@ -10,21 +10,25 @@
 
         <b-collapse id="nav-text-collapse" is-nav>
             <b-navbar-nav class="ml-auto text-right">
-                <!-- Change these links to nuxt links -->
-                <b-nav-item-dropdown ref="testtest"
+                <!-- <b-nav-item-dropdown
                     id="my-nav-dropdown"
                     class="sw-nav-link"
                     text="Portfolio"
                     toggle-class="nav-link-custom"
                     right>
-                    <b-nav-item :to="'oils-gallery'">
+                    <b-nav-item v-on:click.native="dropDownClicked()" :to="'oils-gallery'">
                         Oil
                     </b-nav-item>
-                    <!-- <b-dropdown-divider></b-dropdown-divider> -->
-                    <b-nav-item :to="'water-color-gallery'">
+                    <b-nav-item v-on:click.native="dropDownClicked()" :to="'water-color-gallery'">
                         Watercolor
                     </b-nav-item>
-                </b-nav-item-dropdown>
+                </b-nav-item-dropdown> -->
+                <b-nav-item :to="'oils-gallery'" class="sw-nav-link">
+                    Oil
+                </b-nav-item>
+                <b-nav-item :to="'water-color-gallery'" class="sw-nav-link">
+                    Watercolor
+                </b-nav-item>
                 <b-nav-item :to="'about'" class="sw-nav-link">
                     About
                 </b-nav-item>
@@ -70,13 +74,21 @@
 
 <script>
 export default {
-    watch: {
-        '$route' () {
-            //$('#my-nav-dropdown').dropdown('toggle')
-            //debugger;
-            //this.$refs.testtest.dropdown('toggle');
-        }
-    },
+    // watch: {
+    //     '$route' (to, from) {
+    //         if (to.name == 'oils-gallery' || to.name == 'water-color-gallery') {
+    //             console.log("clicked")
+    //             $('#my-nav-dropdown').toggle();
+    //             $('#my-nav-dropdown').show();
+    //         }
+    //     }
+    // },
+    methods: {
+        dropDownClicked() {
+            console.log("clicked")
+            $('#my-nav-dropdown').toggle();
+        },
+    }
 };
 </script>
 
@@ -86,7 +98,7 @@ export default {
 
     // roughly tablet up
     @media (min-width: map-get($grid-breakpoints, md)) {
-        height: 6vh; //5.2rem;
+        height: 5vh;
     }
 
     .sw-nav-link {
@@ -95,7 +107,7 @@ export default {
         padding: 0 0rem;
 
         @include bad-nav-hack-upper {
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
 
         .nav-link {
@@ -131,7 +143,6 @@ export default {
                 }
                 // desktop
                 @media (min-width: 640px) {
-                    //opacity: 0.5;
                     background: rgba(
                         145,
                         216,
