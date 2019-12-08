@@ -1,7 +1,8 @@
 <template>
-    <div class="container">
+    <main class="container">
         <div class="row contact-container">
             <div class="col">
+        <h1>About Me</h1>
                 <div class="row">
                     <div class="col-md-6 align-self-center">
                         <img src="@/assets/about/about-hero.jpg" 
@@ -106,7 +107,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </template>
 
 <script>
@@ -121,7 +122,7 @@ export default {
 
 <style lang="scss">
 .contact-container {
-    padding-top: 4rem;
+    //padding-top: 4rem;
 
     .sw-hero-image {
         max-width: 100%;
@@ -144,12 +145,12 @@ export default {
 
         .social-media-icon {
             img {
-                width: 3.5rem;
-                height: 3.5rem;
-                @media (max-width: map-get($grid-breakpoints, md)) {
+                // width: 3.5rem;
+                // height: 3.5rem;
+                // @media (max-width: map-get($grid-breakpoints, md)) {
                     width: 2.5rem;
                     height: 2.5rem;
-                }
+                // }
             }
         }
         .social-media-icon:not(:first-of-type) {

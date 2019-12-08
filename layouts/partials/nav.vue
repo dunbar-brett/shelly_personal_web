@@ -37,7 +37,7 @@
                             class="sw-nav-link">
                     Store
                 </b-nav-item>
-                <b-nav-item :to="'contact'" class="sw-nav-link">
+                <b-nav-item :href="'mailto:' + email" class="sw-nav-link" @click="copyToClipboard()">
                     Contact
                 </b-nav-item>
                 <b-nav-item href="https://www.facebook.com/ShellyJ.Weasel/"
@@ -74,20 +74,32 @@
 
 <script>
 export default {
-    // watch: {
-    //     '$route' (to, from) {
-    //         if (to.name == 'oils-gallery' || to.name == 'water-color-gallery') {
-    //             console.log("clicked")
-    //             $('#my-nav-dropdown').toggle();
-    //             $('#my-nav-dropdown').show();
-    //         }
-    //     }
-    // },
+    data() {
+        return {
+            email: 'weaselshelly@gmail.com'
+        }
+    },
     methods: {
         dropDownClicked() {
             console.log("clicked")
             $('#my-nav-dropdown').toggle();
         },
+        copyToClipboard() {
+            navigator.clipboard.writeText(this.email).then(function() {
+                console.log('Async: Copying to clipboard was successful!');
+            }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+            });
+            this.popToast();
+        },
+        popToast() {
+            //https://shakee93.github.io/vue-toasted/?ref=madewithvuejs.com
+            let toast = this.$toasted.show("Email Copied to Clipboard!", { 
+                theme: "outline", 
+                position: "top-center", 
+                duration : 10000
+            });
+        }
     }
 };
 </script>

@@ -53,6 +53,7 @@ export default {
   plugins: [
     { src: '~/plugins/swiper.js', ssr: false },
     { src: '~/plugins/vue-slick', ssr: false },
+    { src: '~/plugins/vue-toasted', ssr: false },
     'plugins/BootstrapVue'
   ],
   /*
