@@ -1,10 +1,10 @@
 <template>
-    <main>
-        <h1 class="hide-tablet-up">About Me</h1>
+    <main class="about">
+        <!-- <h1 class="hide-tablet-up">About Me</h1> -->
         <div class="container">
             <div class="row contact-container">
                 <div class="col">
-                    <h1 class="hide-tablet-down">About Me</h1>
+                    <!-- <h1 class="hide-tablet-down">About Me</h1> -->
                     <div class="row">
                         <div class="col-md-6 align-self-center">
                             <img src="@/assets/about/about-hero.jpg" 
@@ -12,7 +12,7 @@
                                 class="sw-hero-image">
                         </div>
                         <div class="col-md-6 align-self-center">
-                            <!-- <h5 class="text-center contact-title">Hi! My name is Shelly.</h5> -->
+                            <h1>About Me</h1>
                             <p class="contact-copy">
                                 Shelly Weasel Contemporary artist. Born in Defiance, Ohio, she has 
                                 lived in Tucson, AZ and currently resides in Portland, OR. 
@@ -82,7 +82,7 @@
                         </div>
                         <hr>
                         <div class="col-12">
-                            <h5>PRINT</h5>
+                            <h5>PRINT:</h5>
                             <div class="row">
                                 <div class="col-2 text-right about-date">2015</div>
                                 <div class="col-10">
@@ -92,7 +92,7 @@
                         </div>
                         <hr>
                         <div class="col-12">
-                            <h5>EDUCATION</h5>
+                            <h5>EDUCATION:</h5>
                             <div class="row">
                                 <div class="col-2 text-right about-date">2017</div>
                                 <div class="col-10">
@@ -124,48 +124,53 @@ export default {
 </script>
 
 <style lang="scss">
-.contact-container {
-    //padding-top: 4rem;
+.about {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
 
-    .sw-hero-image {
-        max-width: 100%;
-        // tablet below
-        @media (max-width: map-get($grid-breakpoints, md)) {
-            padding-bottom: 2rem;
+    .contact-container {
+
+        .sw-hero-image {
+            max-width: 100%;
+            // tablet below
+            @media (max-width: map-get($grid-breakpoints, md)) {
+                padding-bottom: 2rem;
+            }
         }
-    }
 
-    .contact-title {
-        font-size: 3rem;
-    }
-    .contact-copy {
-        line-height: 1.5rem;
-        font-size: 1.1rem;
-    }
+        .contact-title {
+            font-size: 3rem;
+        }
+        .contact-copy {
+            line-height: 1.5rem;
+            font-size: 1.1rem;
+        }
 
-    .social-media-icons {
-        padding-top: 1.5rem;
+        .social-media-icons {
+            padding-top: 1.5rem;
 
-        .social-media-icon {
-            img {
+            .social-media-icon {
+                img {
                 // width: 3.5rem;
                 // height: 3.5rem;
                 // @media (max-width: map-get($grid-breakpoints, md)) {
                     width: 2.5rem;
                     height: 2.5rem;
                 // }
+                }
+            }
+            .social-media-icon:not(:first-of-type) {
+                img {
+                    margin-left: 1rem;
+                }
             }
         }
-        .social-media-icon:not(:first-of-type) {
-            img {
-                margin-left: 1rem;
-            }
+        
+        .about-date {
+            font-weight: 600;
         }
-    }
-    
-    .about-date {
-        font-weight: 600;
     }
 }
+
 
 </style>
