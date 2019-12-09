@@ -10,21 +10,25 @@
 
         <b-collapse id="nav-text-collapse" is-nav>
             <b-navbar-nav class="ml-auto text-right">
-                <!-- Change these links to nuxt links -->
-                <b-nav-item-dropdown
+                <!-- <b-nav-item-dropdown
                     id="my-nav-dropdown"
                     class="sw-nav-link"
                     text="Portfolio"
                     toggle-class="nav-link-custom"
                     right>
-                    <b-nav-item :to="'oils-gallery'">
+                    <b-nav-item v-on:click.native="dropDownClicked()" :to="'oils-gallery'">
                         Oil
                     </b-nav-item>
-                    <!-- <b-dropdown-divider></b-dropdown-divider> -->
-                    <b-nav-item :to="'water-color-gallery'">
+                    <b-nav-item v-on:click.native="dropDownClicked()" :to="'water-color-gallery'">
                         Watercolor
                     </b-nav-item>
-                </b-nav-item-dropdown>
+                </b-nav-item-dropdown> -->
+                <b-nav-item :to="'oils-gallery'" class="sw-nav-link">
+                    Oil
+                </b-nav-item>
+                <b-nav-item :to="'water-color-gallery'" class="sw-nav-link">
+                    Watercolor
+                </b-nav-item>
                 <b-nav-item :to="'about'" class="sw-nav-link">
                     About
                 </b-nav-item>
@@ -33,20 +37,20 @@
                             class="sw-nav-link">
                     Store
                 </b-nav-item>
-                <b-nav-item :to="'contact'" class="sw-nav-link">
+                <b-nav-item :href="'mailto:' + email" class="sw-nav-link" @click="copyToClipboard()">
                     Contact
                 </b-nav-item>
                 <b-nav-item href="https://www.facebook.com/ShellyJ.Weasel/"
-                    class="hide-tablet-down" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
                     <img src="@/assets/shared/social-media/Facebook.png"
                         class="social-media-icon" alt/>
                 </b-nav-item>
                 <b-nav-item href="https://www.instagram.com/shelly_weasel/"
-                    class="hide-tablet-down" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
                     <img src="@/assets/shared/social-media/Insta.png" class="social-media-icon" alt />
                 </b-nav-item>
                 <b-nav-item href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw"
-                    class="hide-tablet-down" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
                     <img src="@/assets/shared/social-media/Youtube.png"
                         class="social-media-icon" alt/>
                 </b-nav-item>
@@ -70,7 +74,32 @@
 
 <script>
 export default {
+    data() {
+        return {
+            email: 'weaselshelly@gmail.com'
+        }
+    },
     methods: {
+        dropDownClicked() {
+            console.log("clicked")
+            $('#my-nav-dropdown').toggle();
+        },
+        copyToClipboard() {
+            navigator.clipboard.writeText(this.email).then(function() {
+                console.log('Async: Copying to clipboard was successful!');
+            }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+            });
+            this.popToast();
+        },
+        popToast() {
+            //https://shakee93.github.io/vue-toasted/?ref=madewithvuejs.com
+            let toast = this.$toasted.show("Email Copied to Clipboard!", { 
+                theme: "outline", 
+                position: "top-center", 
+                duration : 10000
+            });
+        }
     }
 };
 </script>
@@ -81,13 +110,17 @@ export default {
 
     // roughly tablet up
     @media (min-width: map-get($grid-breakpoints, md)) {
-        height: 6vh; //5.2rem;
+        height: 5vh;
     }
 
     .sw-nav-link {
         text-transform: uppercase;
         color: black;
-        padding: 0 2rem;
+        padding: 0 0rem;
+
+        @include bad-nav-hack-upper {
+            padding: 0 1rem;
+        }
 
         .nav-link {
             color: black;
@@ -122,7 +155,6 @@ export default {
                 }
                 // desktop
                 @media (min-width: 640px) {
-                    //opacity: 0.5;
                     background: rgba(
                         145,
                         216,
@@ -151,7 +183,6 @@ export default {
         object-fit: cover;
         width: 1.5rem;
         height: 1.5rem;
-
 
         @include mobile-nav {
             width: 2rem;

@@ -8,10 +8,12 @@
 
 <script>
 import Nav from './partials/nav.vue';
+import Footer from './partials/footer.vue';
 
 export default {
     components: {
-        Nav
+        Nav,
+        Footer
     },
     beforeMount() {
         document.documentElement.style.overflow = 'hidden';

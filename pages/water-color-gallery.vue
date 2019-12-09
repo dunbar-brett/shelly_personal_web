@@ -1,15 +1,35 @@
 <template>
-    <h1>I am water color gallery</h1>
+    <main class="sw-swiper-wrapper">
+        <h1>Watercolors</h1>
+        <Swiper class="portfolio-wrapper hide-portfolio-carousel" :images="images" />
+        <section class="hide-portfolio-list">
+            <PortfolioList :images="images"></PortfolioList>
+        </section>
+    </main>
 </template>
 
 <script>
-// TODO needs prop with type of portfolio : illustrations / paintings / etc
+import Swiper from '../components/awesomeSwiper'
+import * as images from '../static/portfolio/watercolor/watercolors.js';
+import PortfolioList from '../components/portfolioList';
 
 export default {
-
+    components: {
+        Swiper,
+        PortfolioList
+    },
+    data() {
+        return {
+            images: images.watercolors,
+        }
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+@import '@/assets/scss/custom.scss';
+// TODO revisit this
+// .house{
+//     width: auto !important;
+// }
 </style>

@@ -26,8 +26,18 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'}
-
     ],
+    script: [
+      {
+        src: "https://code.jquery.com/jquery-3.3.1.slim.min.js",
+        type: "text/javascript"
+      },
+      {
+        src:
+          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+        type: "text/javascript"
+      },
+    ]
   },
   /*
   ** Customize the progress-bar color
@@ -37,20 +47,24 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/scss/custom.scss'
+    '@/assets/scss/custom.scss',
+    'swiper/dist/css/swiper.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    
+    { src: '~/plugins/swiper.js', ssr: false },
+    { src: '~/plugins/vue-slick', ssr: false },
+    { src: '~/plugins/vue-toasted', ssr: false },
+    'plugins/BootstrapVue'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt',
+    //'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources'
   ],
   bootstrapVue: {
@@ -69,6 +83,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    transpile: ['vue-slick'],
     extend(config, ctx) {
       if (ctx.isServer) {
         config.externals = [
