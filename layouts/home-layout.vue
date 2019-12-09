@@ -1,7 +1,9 @@
 <template>
   <div class="sw-home-container">
     <!-- <no-ssr placeholder="loading..."></no-ssr> NOT WORKING -->
-    <Nav />
+    <div class="container-fluid">
+      <Nav />
+    </div>
     <nuxt />
   </div>
 </template>
