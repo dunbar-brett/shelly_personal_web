@@ -22,8 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '@/assets/scss/main.scss';
-    .bad-hack {
-        overflow: hidden;
-    }
+@import '@/assets/scss/main.scss';
+.bad-hack {
+    overflow: hidden;
+}
 </style>
