@@ -75,10 +75,10 @@ export default {
   height: 30rem;
 }
 .custom-pagination {
-  top: 95vh;
+  top: 38rem;
 }
 .custom-chevrons {
-  top: 50vh;
+  top: 22rem;
 }
   //.swiper-slide {
     //width: 80% !important;
