@@ -27,7 +27,8 @@ export default {
 <style lang="scss">
 .footer-icons {
     padding-top: 4rem;
-
+    margin-bottom: 2rem;
+    
     .social-link {
         padding: 0 1rem;
 

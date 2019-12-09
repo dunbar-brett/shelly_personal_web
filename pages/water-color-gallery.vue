@@ -1,17 +1,22 @@
 <template>
     <main class="sw-swiper-wrapper">
         <h1>Watercolors</h1>
-        <Swiper :images="images" />
+        <Swiper class="portfolio-wrapper hide-portfolio-carousel" :images="images" />
+        <section class="hide-portfolio-list">
+            <PortfolioList :images="images"></PortfolioList>
+        </section>
     </main>
 </template>
 
 <script>
 import Swiper from '../components/awesomeSwiper'
 import * as images from '../static/portfolio/watercolor/watercolors.js';
+import PortfolioList from '../components/portfolioList';
 
 export default {
     components: {
-        Swiper
+        Swiper,
+        PortfolioList
     },
     data() {
         return {
@@ -22,6 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/custom.scss';
 // TODO revisit this
 // .house{
 //     width: auto !important;

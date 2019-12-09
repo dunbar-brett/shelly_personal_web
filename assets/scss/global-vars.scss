@@ -9,13 +9,23 @@ $grid-breakpoints: (
   xl: 1300px
 );
 
+
 .hide-tablet-up {
-  @media (min-width: map-get($grid-breakpoints, md)) { display: none; }
+  @media (min-width: map-get($grid-breakpoints, md)) { display: none !important; }
 }
 
 .hide-tablet-down {
-  @media (max-width: map-get($grid-breakpoints, md)){ display: none; }
+  @media (max-width: map-get($grid-breakpoints, md)){ display: none !important; }
 }
+
+.hide-portfolio-carousel {
+  @media (max-width: 750px) { display: none; }
+}
+
+.hide-portfolio-list {
+  @media (min-width: 749px) { display: none; }
+}
+
 
 @mixin mobile-nav {
   @media (max-width: map-get($grid-breakpoints, md)) { @content; }
@@ -34,11 +44,11 @@ $grid-breakpoints: (
 }
 
 .bad-social-media-hide-hack {
-  @media (max-width: 730px) { display: none; }
+  @media (max-width: 775px) { display: none; }
 }
 .bad-social-media-show-hack {
-  @media (max-width: 730px) { display: block; }
-  @media (min-width: 730px) { display: none; }
+  @media (max-width: 775px) { display: block; }
+  @media (min-width: 775px) { display: none; }
   @media (max-width: 640px) { display: none; }
 }
 
