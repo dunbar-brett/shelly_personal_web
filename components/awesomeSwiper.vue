@@ -2,9 +2,13 @@
   <!-- You can find this swiper instance object in current component by the "mySwiper"  -->
   <section v-swiper:mySwiper="swiperOption">
     <div class="swiper-wrapper">
-      <div :class="'swiper-slide ' + image.customClass" v-for="image in images" :key="image.id">
+      <figure :class="'swiper-slide ' + image.customClass" v-for="image in images" :key="image.id">
         <img :src="'portfolio/' + image.filename" class="images">
-      </div>
+        <figcaption>
+          <p class="image-caption">{{image.title}}</p>
+          <p class="image-caption">{{image.description}}</p>
+        </figcaption>
+      </figure>
     </div>
     <div class="swiper-pagination custom-pagination" ></div>
     <div class="swiper-button-prev custom-chevrons" slot="button-prev"></div>
@@ -75,7 +79,7 @@ export default {
   height: 30rem;
 }
 .custom-pagination {
-  top: 38rem;
+  top: 42rem;;
 }
 .custom-chevrons {
   top: 22rem;

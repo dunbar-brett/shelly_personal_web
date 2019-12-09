@@ -1,6 +1,8 @@
 <template>
     <main class="sw-swiper-wrapper">
-        <h1>Oils</h1>
+        <header >
+            <h1>Oil</h1>
+        </header>
         <Swiper class="portfolio-wrapper hide-portfolio-carousel" :images="images" />
         <section class="hide-portfolio-list">
             <PortfolioList :images="images"></PortfolioList>

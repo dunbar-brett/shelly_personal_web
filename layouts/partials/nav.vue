@@ -107,6 +107,7 @@ export default {
 <style lang="scss">
 .shelly-nav-bar {
     background-color: white;
+    padding: 0.5rem 0rem !important;
 
     // roughly tablet up
     @media (min-width: map-get($grid-breakpoints, md)) {
@@ -123,7 +124,7 @@ export default {
         }
 
         .nav-link {
-            color: black;
+            color: black !important;
         }
     }
 

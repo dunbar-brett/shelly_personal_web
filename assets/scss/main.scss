@@ -15,6 +15,11 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+h1 {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 1.8rem !important;
+    padding: 0.5rem 0.2rem !important;
+}
 
 .shelly-web-container {
     width: 100%;

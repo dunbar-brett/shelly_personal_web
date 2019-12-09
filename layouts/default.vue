@@ -15,6 +15,9 @@ export default {
     Nav,
     Footer
   },
+  beforeMount() {
+        document.documentElement.style.overflowY = 'auto';
+    },
 }
 </script>
 
@@ -23,6 +26,6 @@ export default {
   
   // this is probably really bad
   body.bad-hack {
-    overflow: auto;
+    overflow-y: auto;
   }
 </style>

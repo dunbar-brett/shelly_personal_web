@@ -1,7 +1,9 @@
 <template>
   <div class="sw-home-container">
     <!-- <no-ssr placeholder="loading..."></no-ssr> NOT WORKING -->
-    <Nav />
+    <div class="container-fluid">
+      <Nav />
+    </div>
     <nuxt />
   </div>
 </template>
@@ -22,8 +24,8 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '@/assets/scss/main.scss';
-    .bad-hack {
-        overflow: hidden;
-    }
+@import '@/assets/scss/main.scss';
+.bad-hack {
+    overflow: hidden;
+}
 </style>
