@@ -27,8 +27,8 @@ export default {
     return {
       windowWidth: 0,
       swiperOption: {
-        centeredSlides: true,
-        slidesPerView: 1,
+        spaceBetween: 30,
+        slidesPerView: 'auto',
         pagination: {
             el: '.swiper-pagination',
             clickable: true
@@ -84,9 +84,9 @@ export default {
 .custom-chevrons {
   top: 22rem;
 }
-  //.swiper-slide {
-    //width: 80% !important;
-  //}
+.swiper-slide {
+  width: auto !important;
+}
   // .swiper-slide:nth-child(3n) {
   //     width: 20%;
   // }
