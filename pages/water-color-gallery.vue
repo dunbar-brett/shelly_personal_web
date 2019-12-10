@@ -1,7 +1,7 @@
 <template>
     <main class="sw-swiper-wrapper">
         <header>
-            <h1>Watercolor</h1>
+            <h1>Watercolor Paintings</h1>
         </header>
         <Swiper class="portfolio-wrapper hide-portfolio-carousel" :images="images" />
         <section class="hide-portfolio-list">
