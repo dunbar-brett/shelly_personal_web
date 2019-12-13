@@ -15,9 +15,18 @@ export default {
     Nav,
     Footer
   },
+  watch: {
+    $route(to, from) {
+      // react to route changes...
+      if (to.fullPath.includes(from.fullPath)) {
+        // remove from path fix for nuxt generate bug
+        to.fullPath = to.fullPath.replace(from.fullPath, "");
+      }
+    }
+  },
   beforeMount() {
-        document.documentElement.style.overflowY = 'auto';
-    },
+      document.documentElement.style.overflowY = 'auto';
+  },
 }
 </script>
 

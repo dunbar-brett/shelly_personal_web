@@ -15,6 +15,9 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
 }
+body {
+    overflow-x: hidden; // fix for portfolio hori scroll
+}
 h1 {
     font-family: 'Lato', sans-serif !important;
     font-size: 1.8rem !important;
