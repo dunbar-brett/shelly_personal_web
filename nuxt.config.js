@@ -12,7 +12,7 @@ export default {
   router: {
     base: '/shelly_website_staged/'
   },
-  mode: 'universal',
+  mode: 'static',
   /*
   ** Headers of the page
   */
