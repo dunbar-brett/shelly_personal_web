@@ -2,7 +2,7 @@
     <b-navbar toggleable="md" class="shelly-nav-bar">
         <!-- this was set to index for production -->
         <!-- <b-navbar-brand :to="'index'"> -->
-        <b-navbar-brand href="/">
+        <b-navbar-brand :to="'/'">
             <img src="@/assets/shared/header-logo.png" class="brand-image" alt />
         </b-navbar-brand>
 
@@ -23,13 +23,13 @@
                         Watercolor
                     </b-nav-item>
                 </b-nav-item-dropdown> -->
-                <b-nav-item href="/oils-gallery" class="sw-nav-link">
+                <b-nav-item :to="'oils-gallery'" class="sw-nav-link">
                     Oil
                 </b-nav-item>
-                <b-nav-item href="/water-color-gallery" class="sw-nav-link">
+                <b-nav-item :to="'water-color-gallery'" class="sw-nav-link">
                     Watercolor
                 </b-nav-item>
-                <b-nav-item href="/about" class="sw-nav-link">
+                <b-nav-item :to="'water-color-gallery'" class="sw-nav-link">
                     About
                 </b-nav-item>
                 <b-nav-item href="https://society6.com/shellyweasel"

@@ -9,7 +9,7 @@ const routerBase = {
 //...routerBase, 
 //
 export default {
-  mode: 'universal',
+  mode: 'static',
   /*
   ** Headers of the page
   */
