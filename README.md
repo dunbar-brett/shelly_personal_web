@@ -1,6 +1,6 @@
 # shelly_personal_web
 
-> Shellys website with NuxtJs
+> Shellys Weasel Art
 
 ## Build Setup
 

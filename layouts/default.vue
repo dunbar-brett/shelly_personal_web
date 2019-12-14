@@ -16,12 +16,15 @@ export default {
     Footer
   },
   watch: {
-    $route(to, from) {
+    $route(to, from, next) {
       // react to route changes...
-      if (to.fullPath.includes(from.fullPath)) {
-        // remove from path fix for nuxt generate bug
-        to.fullPath = to.fullPath.replace(from.fullPath, "");
-      }
+      console.log(`from path : ${from.fullPath}`)
+      console.log(to);
+      console.log(`to path : ${to.fullPath}`)
+      console.log(from);
+      console.log(`route path : ${this.$route.fullPath}`)
+      console.log(this.$route)
+      //this.$route.fullPath = this.$route.fullPath.replace(from.fullPath, "");
     }
   },
   beforeMount() {
