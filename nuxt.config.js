@@ -13,6 +13,9 @@ export default {
     base: '/shelly_website_staged/'
   },
   mode: 'static',
+  generate: {
+    fallback: '200.html'
+  },
   /*
   ** Headers of the page
   */
