@@ -10,6 +10,9 @@ const routerBase = {
 //
 export default {
   mode: 'static',
+  generate: {
+    fallback: '200.html'
+  },
   /*
   ** Headers of the page
   */
