@@ -29,7 +29,7 @@
                 <b-nav-item :to="'water-color-gallery'" class="sw-nav-link">
                     Watercolor
                 </b-nav-item>
-                <b-nav-item :to="'water-color-gallery'" class="sw-nav-link">
+                <b-nav-item :to="'about'" class="sw-nav-link">
                     About
                 </b-nav-item>
                 <b-nav-item href="https://society6.com/shellyweasel"
