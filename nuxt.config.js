@@ -1,7 +1,7 @@
 const nodeExternals = require('webpack-node-externals');
 const routerBase = {
   router: {
-    base: '/shelly_website_staged/'
+    base: '/shelly_website_staged'
   }
 };
 
@@ -11,7 +11,7 @@ const routerBase = {
 export default {
   mode: 'static',
   generate: {
-    fallback: '200.html'
+    fallback: '404.html'
   },
   /*
   ** Headers of the page
