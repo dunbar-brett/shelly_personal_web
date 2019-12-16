@@ -80,10 +80,6 @@ export default {
         }
     },
     methods: {
-        dropDownClicked() {
-            console.log("clicked")
-            $('#my-nav-dropdown').toggle();
-        },
         copyToClipboard() {
             navigator.clipboard.writeText(this.email).then(function() {
                 console.log('Async: Copying to clipboard was successful!');
@@ -97,7 +93,7 @@ export default {
             let toast = this.$toasted.show("Email Copied to Clipboard!", { 
                 theme: "outline", 
                 position: "top-center", 
-                duration : 10000
+                duration : 4000
             });
         }
     }
@@ -106,6 +102,7 @@ export default {
 
 <style lang="scss">
 .shelly-nav-bar {
+    overflow-y: hidden;
     background-color: white;
     padding: 1.5rem 0rem !important;
 
