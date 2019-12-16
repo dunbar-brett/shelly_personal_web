@@ -12,7 +12,7 @@ export default {
   router: {
     base: '/shelly_website_staged/'
   },
-  mode: 'static',
+  mode: 'universal',
   generate: {
     fallback: '404.html'
   },
