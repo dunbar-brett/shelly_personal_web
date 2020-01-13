@@ -10,7 +10,7 @@ const routerBase = {
 //
 export default {
   router: {
-    base: '/shelly_website_staged/'
+    base: '/'
   },
   mode: 'universal',
   generate: {
