@@ -2,19 +2,11 @@ Follow these instructions before you make any changes:
 
 Open your Terminal window  (cmd + Space -- Then type in Terminal and hit enter)
 
-Navigate to the root folder of the shelly_personal_web project
+Enter:
+shelly-website
 
-Make sure you're in the master branch
-
-enter:
-git pull origin
-
-You should see a message saying "Everything is up to date" or a bunch of file changes.
-
-Now in your Finder window, you can navigate to the 'static' folder and find the 'Portfolio' folder.
-
-Here you should see both Oils and Watercolor folders. Each of these folders has a .js file with their 
-respective names. This file contains a javascript list that associates with each image in that directory.
+Make sure you're in the master-heroku branch by entering
+git branch
 
 *******************
 IF YOU ADD AN IMAGE
@@ -42,7 +34,7 @@ IF YOU ARE DELETING AN IMAGE
 In the .js file find the entry with the image you're removing. 
 Make sure to delete it from { to }, including the comma.
 
-Descrese the ids by 1 of all the entries after the one you just deleted.
+Decrease the ids by 1 of all the entries after the one you just deleted.
 
 ********************
 WHEN YOU'RE FINISHED
@@ -81,6 +73,13 @@ At this point your changes are being saved and the hardest part is over.
 Now you're going to generate the website and deploy it.
 
 Enter:
+git push heroku master-heroku:master
+
+
+************************************
+IGNORE THE REST OF THIS FILE FOR NOW
+************************************
+Enter:
 npm run generate
 
 This will take a few seconds to build the site. 
@@ -90,7 +89,7 @@ In a browser navigate to the github staged or prod repo.
 https://github.com/dunbar-brett/shelly_website_staged
 
 Back in the Finder window select all the files and drag them into the browser on the github page.
-This should trigger an upload. When it's done. Enter a breif description of the changes you made
+This should trigger an upload. When it's done. Enter a brief description of the changes you made
 and Commit. 
 
 This part should take a minute or two. Once it's done, so are you!
