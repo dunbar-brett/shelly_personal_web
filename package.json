@@ -2,6 +2,7 @@
   "name": "shelly_personal_web",
   "version": "1.0.0",
   "description": "Shellys website with NuxtJs",
+  "image": "~/static/gallery/mobile/MHome1.jpg",
   "author": "dunbar-brett",
   "private": true,
   "scripts": {

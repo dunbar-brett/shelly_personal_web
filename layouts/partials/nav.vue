@@ -102,7 +102,7 @@ export default {
 
 <style lang="scss">
 .shelly-nav-bar {
-    overflow-y: hidden;
+    overflow: hidden;
     background-color: white;
     padding: 1.5rem 0rem !important;
 
