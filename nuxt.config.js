@@ -9,9 +9,12 @@ const routerBase = {
 //...routerBase, 
 //
 export default {
+<<<<<<< HEAD
   router: {
     base: '/'
   },
+=======
+>>>>>>> dev
   mode: 'universal',
   generate: {
     fallback: '404.html'
@@ -24,7 +27,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'og:image', name: 'og:image', content: process.env.npm_package_image || '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' },

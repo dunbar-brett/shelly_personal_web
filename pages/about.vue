@@ -14,7 +14,7 @@
                         <div class="col-md-6 align-self-center">
                             <h1>About Me</h1>
                             <p class="contact-copy">
-                                Shelly Weasel Contemporary artist. Born in Defiance, Ohio, she has 
+                                Shelly Weasel contemporary artist. Born in Defiance, Ohio, she has 
                                 lived in Tucson, AZ and currently resides in Portland, OR. 
                             </p>
                             <p class="contact-copy">
