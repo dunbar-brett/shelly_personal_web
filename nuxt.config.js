@@ -9,12 +9,9 @@ const routerBase = {
 //...routerBase, 
 //
 export default {
-<<<<<<< HEAD
   router: {
     base: '/'
   },
-=======
->>>>>>> dev
   mode: 'universal',
   generate: {
     fallback: '404.html'
