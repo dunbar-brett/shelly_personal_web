@@ -9,9 +9,7 @@ const routerBase = {
 //...routerBase, 
 //
 export default {
-  router: {
-    base: '/'
-  },
+  ...routerBase,
   mode: 'universal',
   generate: {
     fallback: '404.html'
@@ -25,10 +23,10 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { hid: 'og:image', name: 'og:image', content: process.env.npm_package_image || '' }
+      { hid: 'og:image', property: 'og:image', content: 'http://www.shellyweasel.com/gallery/desktop/Home1.jpg' || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: routerBase.router.base + '/favi.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'}
     ],
     script: [
