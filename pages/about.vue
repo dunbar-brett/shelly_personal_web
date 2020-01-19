@@ -110,16 +110,22 @@
                 </div>
             </div>
         </div>
+        <!-- <Footer /> -->
     </main>
 </template>
 
 <script>
+import Footer from '../layouts/partials/footer.vue';
+
 export default {
-  beforeMount() {
+    components: {
+        Footer
+    },
+    beforeMount() {
     this.$nextTick(() => {
         document.documentElement.style.overflow = 'auto';
     });
-  }
+    }
 }
 </script>
 
@@ -171,6 +177,4 @@ export default {
         }
     }
 }
-
-
 </style>

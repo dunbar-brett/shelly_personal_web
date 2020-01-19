@@ -9,6 +9,7 @@
         <section class="hide-portfolio-list">
             <PortfolioList :images="images"></PortfolioList>
         </section>
+        <!-- <Footer/> -->
     </main>
 </template>
 
@@ -16,6 +17,7 @@
 import Swiper from '../components/awesomeSwiper'
 import * as images from '../static/portfolio/watercolor/watercolors.js';
 import PortfolioList from '../components/portfolioList';
+import Footer from '../layouts/partials/footer.vue';
 
 export default {
     components: {

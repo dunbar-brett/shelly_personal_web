@@ -26,7 +26,7 @@
                 <b-nav-item :to="'/oils-gallery'" class="sw-nav-link">
                     Oil
                 </b-nav-item>
-                <b-nav-item :to="'/water-color-gallery'" class="sw-nav-link">
+                <b-nav-item :to="'/watercolor-gallery'" class="sw-nav-link">
                     Watercolor
                 </b-nav-item>
                 <b-nav-item :to="'/about'" class="sw-nav-link">

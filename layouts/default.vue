@@ -1,31 +1,24 @@
 <template>
-  <div class="container-fluid">
-    <Nav />
-    <nuxt />
+  <section>
+    <div class="container-fluid">
+      <Nav />
+      <nuxt />
+      <BottomSocialMediaIcons/>
+    </div>
     <Footer />
-  </div>
+  </section>
 </template>
 
 <script>
 import Nav from './partials/nav.vue';
+import BottomSocialMediaIcons from './partials/bottom-social-media-icons.vue';
 import Footer from './partials/footer.vue';
 
 export default {
   components: {
     Nav,
+    BottomSocialMediaIcons,
     Footer
-  },
-  watch: {
-    $route(to, from, next) {
-      // react to route changes...
-      console.log(`from path : ${from.fullPath}`)
-      console.log(to);
-      console.log(`to path : ${to.fullPath}`)
-      console.log(from);
-      console.log(`route path : ${this.$route.fullPath}`)
-      console.log(this.$route)
-      //this.$route.fullPath = this.$route.fullPath.replace(from.fullPath, "");
-    }
   },
   beforeMount() {
       document.documentElement.style.overflowY = 'auto';
