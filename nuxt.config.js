@@ -1,7 +1,7 @@
 const nodeExternals = require('webpack-node-externals');
 const routerBase = {
   router: {
-    base: '/shelly_website_staged'
+    base: '/'
   }
 };
 
