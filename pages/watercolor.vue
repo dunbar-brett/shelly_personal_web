@@ -9,6 +9,7 @@
         <section class="hide-portfolio-list">
             <PortfolioList :images="images"></PortfolioList>
         </section>
+        <!-- <Footer/> -->
     </main>
 </template>
 
@@ -16,6 +17,7 @@
 import Swiper from '../components/awesomeSwiper'
 import * as images from '../static/portfolio/watercolor/watercolors.js';
 import PortfolioList from '../components/portfolioList';
+import Footer from '../layouts/partials/footer.vue';
 
 export default {
     components: {
@@ -25,8 +27,19 @@ export default {
     data() {
         return {
             images: images.watercolors,
+            metaTitle: 'Watercolor Gallery | Shelly Weasel | Portland Oregon Artist',
+            metaDescription: 'Watercolor paintings by Shelly Weasel. Please contact Shelly Weasel for details or more information about commission paintings.'
         }
-    }
+    },
+    head() {
+        return {
+            title: this.metaTitle,
+            meta: [
+                // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+                { hid: 'description', name: 'description', content: this.metaDescription }
+            ]
+        };
+    },
 }
 </script>
 

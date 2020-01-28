@@ -115,17 +115,35 @@
 
 <script>
 export default {
-  beforeMount() {
-    this.$nextTick(() => {
-        document.documentElement.style.overflow = 'auto';
-    });
-  }
+    data() {
+        return {
+            metaTitle: 'About | Shelly Weasel | Portland Oregon Artist',
+            metaDescription: 'Shelly J. Weasel Contemporary artist. Born in Defiance, Ohio, she has lived in Tucson, AZ and currently resides in Portland, OR.'
+        }
+    },
+    head() {
+        return {
+            title: this.metaTitle,
+            meta: [
+                // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+                { hid: 'description', name: 'description', content: this.metaDescription }
+            ]
+        };
+    },
+    beforeMount() {
+        this.$nextTick(() => {
+            document.documentElement.style.overflow = 'auto';
+        });
+    },
+    // mounted() {
+    //     document.getElementById('footer').style.position = 'relative';
+    // }
 }
 </script>
 
 <style lang="scss">
 .about {
-    padding-bottom: 2rem;
+    padding-bottom: 10rem;
     padding-top: 1rem;
 
     .contact-container {
@@ -171,6 +189,4 @@ export default {
         }
     }
 }
-
-
 </style>

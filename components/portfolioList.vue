@@ -68,7 +68,7 @@ export default {
     .back-to-top-btn {
         display: none;
         position: fixed;
-        bottom: 20px;
+        bottom: 2.5rem;
         right: 30px;
         z-index: 99;
         font-size: 18px;
