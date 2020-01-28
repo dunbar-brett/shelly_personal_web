@@ -1,7 +1,7 @@
 const nodeExternals = require('webpack-node-externals');
 const routerBase = {
   router: {
-    base: '/shelly_website_staged'
+    base: '/'
   }
 };
 
@@ -26,7 +26,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: 'http://www.shellyweasel.com/gallery/desktop/Home1.jpg' || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: routerBase.router.base + '/favi.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' }, /* routerBase.router.base +  */
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'}
     ],
     script: [
