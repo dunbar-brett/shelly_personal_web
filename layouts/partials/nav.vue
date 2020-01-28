@@ -23,7 +23,7 @@
                         Watercolor
                     </b-nav-item>
                 </b-nav-item-dropdown> -->
-                <b-nav-item :to="'/oils'" class="sw-nav-link">
+                <b-nav-item :to="'/oil'" class="sw-nav-link">
                     Oil
                 </b-nav-item>
                 <b-nav-item :to="'/watercolor'" class="sw-nav-link">
