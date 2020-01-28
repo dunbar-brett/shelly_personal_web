@@ -35,6 +35,10 @@ $grid-breakpoints: (
   @media (min-width: map-get($grid-breakpoints, md)){ @content; }
 }
 
+/***************************
+        Bad Hacks
+****************************/
+
 @mixin bad-nav-hack-upper {
   @media (min-width: 995px) { @content; }
 }

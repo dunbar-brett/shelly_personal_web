@@ -18,7 +18,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Portland Artist | Shelly J. Weasel' || process.env.npm_package_name,
+    title: 'Portland Artist | Shelly J. Weasel | Contemporary Artist' || process.env.npm_package_name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -26,7 +26,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: 'http://www.shellyweasel.com/gallery/desktop/Home1.jpg' || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: routerBase.router.base + '/favi.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' }, /* routerBase.router.base +  */
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato&display=swap'}
     ],
     script: [
@@ -59,6 +59,7 @@ export default {
     { src: '~/plugins/swiper.js', ssr: false },
     { src: '~/plugins/vue-slick', ssr: false },
     { src: '~/plugins/vue-toasted', ssr: false },
+    { src: '~/plugins/ga', ssr: false },
     'plugins/BootstrapVue'
   ],
   /*

@@ -1,7 +1,7 @@
 {
   "name": "shelly_personal_web",
   "version": "1.0.0",
-  "description": "Shellys website with NuxtJs",
+  "description": "Shelly J. Weasel Contemporary artist. Currently resides in Portland, OR. Using watercolor as her primary medium for painting.",
   "image": "/gallery/mobile/MHome1.jpg",
   "author": "dunbar-brett",
   "private": true,
@@ -27,7 +27,10 @@
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^0.1.2",
+<<<<<<< HEAD
     "cross-env": "^6.0.3",
+=======
+>>>>>>> master
     "node-sass": "^4.13.1",
     "nodemon": "^1.19.4",
     "push-dir": "^0.4.1",
