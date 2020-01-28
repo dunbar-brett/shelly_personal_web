@@ -25,14 +25,25 @@ export default {
     data() {
         return {
             images: images.oils,
+            metaTitle: 'Oil Painting Gallery | Shelly Weasel | Portland Oregon Artist',
+            metaDescription: 'Oil paintings by Shelly Weasel. Please contact Shelly Weasel for details or more information about commission paintings.'
         }
-    }
+    },
+    head() {
+        return {
+            title: this.metaTitle,
+            meta: [
+                // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+                { hid: 'description', name: 'description', content: this.metaDescription }
+            ]
+        };
+    },
 }
 </script>
 
 <style lang="scss">
 @import '@/assets/scss/custom.scss';
-// TODO revisit this
+// TODO revisit this -- custom class?
 // .fight-club {
 //     width: auto !important;
 // }

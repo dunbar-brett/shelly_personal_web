@@ -17,7 +17,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Portland Artist | Shelly J. Weasel' || process.env.npm_package_name,
+    title: 'Portland Artist | Shelly J. Weasel | Contemporary Artist' || process.env.npm_package_name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -58,6 +58,7 @@ export default {
     { src: '~/plugins/swiper.js', ssr: false },
     { src: '~/plugins/vue-slick', ssr: false },
     { src: '~/plugins/vue-toasted', ssr: false },
+    { src: '~/plugins/ga', ssr: false },
     'plugins/BootstrapVue'
   ],
   /*
