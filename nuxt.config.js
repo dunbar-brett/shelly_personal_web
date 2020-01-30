@@ -1,7 +1,7 @@
 const nodeExternals = require('webpack-node-externals');
 const routerBase = {
   router: {
-    base: '/shelly_website_staged'
+    base: '/'
   }
 };
 
@@ -17,12 +17,18 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en-US',
+    },
     title: 'Portland Artist | Shelly J. Weasel | Contemporary Artist' || process.env.npm_package_name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { hid: 'og:image', name: 'og:image', content: process.env.npm_package_image || '' }
+      { hid: 'og:image', name: 'og:image', content: process.env.npm_package_image || '' },
+      { hid: 'og:description', name: 'og:description', content: process.env.npm_package_description || '' },
+      { hid: 'og:title', name: 'og:title', content: 'Portland Artist | Shelly J. Weasel | Contemporary Artist' },
+      { hid: 'og:url', name: 'og:url', content: 'http://www.shellyweasel.com' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' },
