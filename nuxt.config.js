@@ -18,12 +18,19 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en-US',
+    },
     title: 'Portland Artist | Shelly J. Weasel | Contemporary Artist' || process.env.npm_package_name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
-      { hid: 'og:image', property: 'og:image', content: 'http://www.shellyweasel.com/gallery/desktop/Home1.jpg' || '' }
+      { hid: 'keywords', name: 'keywords', content: 'Shelly, Weasel, Shelly Weasel, Art, Contemporary, watercolor, oil, painting, Portland, Oregon, OR' || '' },
+      { hid: 'og:image', name: 'og:image', content: 'http://www.shellyweasel.com/gallery/desktop/Home1.jpg' || '' },
+      { hid: 'og:description', name: 'og:description', content: process.env.npm_package_description || '' },
+      { hid: 'og:title', name: 'og:title', content: 'Portland Artist | Shelly J. Weasel | Contemporary Artist' },
+      { hid: 'og:url', name: 'og:url', content: 'http://www.shellyweasel.com' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favi.ico' }, /* routerBase.router.base +  */
@@ -68,7 +75,8 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     //'bootstrap-vue/nuxt',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
@@ -96,5 +104,23 @@ export default {
         ]
       }
     }
-  }
+  },
+  sitemap: {
+    path: '/shellyweasel.com.xml',
+    hostname: 'https://shellyweasel.com',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false,
+    routes: [
+      '/',
+      '/oil',
+      '/watercolor',
+      '/about',
+    ].map(route => ({
+      url: route,
+      changefreq: 'monthly',
+      priority: 1,
+      lastmodISO: new Date().toISOString().split('T')[0]
+    }))
+  },
 }
