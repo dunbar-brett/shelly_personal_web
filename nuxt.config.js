@@ -74,7 +74,8 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     //'bootstrap-vue/nuxt',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/sitemap'
   ],
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
@@ -102,5 +103,23 @@ export default {
         ]
       }
     }
-  }
+  },
+  sitemap: {
+    path: '/shellyweasel.com.xml',
+    hostname: 'https://shellyweasel.com',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false,
+    routes: [
+      '/',
+      '/oil',
+      '/watercolor',
+      '/about',
+    ].map(route => ({
+      url: route,
+      changefreq: 'monthly',
+      priority: 1,
+      lastmodISO: new Date().toISOString().split('T')[0]
+    }))
+  },
 }
