@@ -1,6 +1,6 @@
 <template>
   <div class="sw-home-container">
-    <!-- <no-ssr placeholder="loading..."></no-ssr> NOT WORKING -->
+    <!-- <client-only placeholder="loading..."></client-only> NOT WORKING -->
     <div class="container-fluid">
       <Nav />
     </div>

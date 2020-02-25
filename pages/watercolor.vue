@@ -3,9 +3,9 @@
         <header>
             <h1>Watercolor Paintings</h1>
         </header>
-        <no-ssr placeholder="Loading...">
+        <client-only placeholder="Loading...">
             <Swiper class="portfolio-wrapper hide-portfolio-carousel" :images="images" />
-        </no-ssr>
+        </client-only>
         <section class="hide-portfolio-list">
             <PortfolioList :images="images"></PortfolioList>
         </section>

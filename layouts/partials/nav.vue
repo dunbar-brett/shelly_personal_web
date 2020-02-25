@@ -42,19 +42,19 @@
                 </b-nav-item>
                 <b-nav-item href="https://www.facebook.com/ShellyJ.Weasel/"
                     class="hide-tablet-down bad-social-media-hide-hack"
-                        target="_blank" rel="noopener">>
+                        target="_blank" rel="noopener">
                     <img src="@/assets/shared/social-media/Facebook.png"
                         class="social-media-icon" alt="Shelly Weasel Facebook"/>
                 </b-nav-item>
                 <b-nav-item href="https://www.instagram.com/shelly_weasel/"
                     class="hide-tablet-down bad-social-media-hide-hack"
-                        target="_blank" rel="noopener">>
+                        target="_blank" rel="noopener">
                     <img src="@/assets/shared/social-media/Insta.png" 
                     class="social-media-icon" alt="Shelly Weasel Instagram" />
                 </b-nav-item>
                 <b-nav-item href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw"
                     class="hide-tablet-down bad-social-media-hide-hack"
-                        target="_blank" rel="noopener">>
+                        target="_blank" rel="noopener">
                     <img src="@/assets/shared/social-media/Youtube.png"
                         class="social-media-icon" alt="Shelly Weasel YouTube"/>
                 </b-nav-item>

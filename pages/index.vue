@@ -1,8 +1,8 @@
 <template>
   <div class="shelly-home">
-    <no-ssr placeholder="Loading...">
+    <client-only placeholder="Loading...">
       <Gallery></Gallery>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
