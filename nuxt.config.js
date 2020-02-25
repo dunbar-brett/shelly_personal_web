@@ -25,7 +25,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || 'TEST' },
       { hid: 'keywords', name: 'keywords', content: 'Shelly, Weasel, Shelly Weasel, Art, Contemporary, watercolor, oil, painting, Portland, Oregon, OR' || '' },
       { hid: 'og:image', name: 'og:image', content: 'http://www.shellyweasel.com/gallery/desktop/Home1.jpg' || '' },
       { hid: 'og:description', name: 'og:description', content: process.env.npm_package_description || '' },
