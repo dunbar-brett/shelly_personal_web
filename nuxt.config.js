@@ -107,7 +107,7 @@ export default {
   },
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://shellyweasel.com',
+    hostname: 'http://shellyweasel.com',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: false,

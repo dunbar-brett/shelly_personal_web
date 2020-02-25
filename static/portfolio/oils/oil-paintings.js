@@ -28,7 +28,7 @@ export const oils = [
         customClass: "",
         title: "Ericka",
         description: "Oil on Canvas 16\"x20\"",
-        filename: "oils/Screen Shot 2019-09-28 at 1.56.49 PM.png"
+        filename: "oils/erika.jpg"
     },
     {
         id: 3,
@@ -49,7 +49,7 @@ export const oils = [
         customClass: "",
         title: "Skull",
         description: "Egg Tempera on Clay Board 8\"x10\"",
-        filename: "oils/skull-oil.png"
+        filename: "oils/skull-oil.jpg"
     },
     {
         id: 6,

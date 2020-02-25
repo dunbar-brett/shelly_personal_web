@@ -53,7 +53,7 @@ export const watercolors = [
         customClass: "",
         title: "The Girl",
         description: "Watercolor, charcoal, color pencil, thread 22\"x22\"",
-        filename: "watercolor/squished-face.png"
+        filename: "watercolor/squished-face.jpg"
     },
     {
         id: 8,
