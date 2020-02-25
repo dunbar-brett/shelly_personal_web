@@ -3,7 +3,7 @@
         <!-- this was set to index for production -->
         <!-- <b-navbar-brand :to="'index'"> -->
         <b-navbar-brand :to="'/'">
-            <img src="@/assets/shared/header-logo.png" class="brand-image" alt />
+            <img src="@/assets/shared/header-logo.png" class="brand-image" alt="Shelly Weasel Logo" />
         </b-navbar-brand>
 
         <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
@@ -41,30 +41,38 @@
                     Contact
                 </b-nav-item>
                 <b-nav-item href="https://www.facebook.com/ShellyJ.Weasel/"
-                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack"
+                        target="_blank" rel="noopener">>
                     <img src="@/assets/shared/social-media/Facebook.png"
-                        class="social-media-icon" alt/>
+                        class="social-media-icon" alt="Shelly Weasel Facebook"/>
                 </b-nav-item>
                 <b-nav-item href="https://www.instagram.com/shelly_weasel/"
-                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
-                    <img src="@/assets/shared/social-media/Insta.png" class="social-media-icon" alt />
+                    class="hide-tablet-down bad-social-media-hide-hack"
+                        target="_blank" rel="noopener">>
+                    <img src="@/assets/shared/social-media/Insta.png" 
+                    class="social-media-icon" alt="Shelly Weasel Instagram" />
                 </b-nav-item>
                 <b-nav-item href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw"
-                    class="hide-tablet-down bad-social-media-hide-hack" target="_blank">
+                    class="hide-tablet-down bad-social-media-hide-hack"
+                        target="_blank" rel="noopener">>
                     <img src="@/assets/shared/social-media/Youtube.png"
-                        class="social-media-icon" alt/>
+                        class="social-media-icon" alt="Shelly Weasel YouTube"/>
                 </b-nav-item>
                 <b-nav-text class="hide-tablet-up">
-                    <a href="https://www.facebook.com/ShellyJ.Weasel/" target="_blank">
+                    <a href="https://www.facebook.com/ShellyJ.Weasel/"
+                        target="_blank" rel="noopener">
                         <img src="@/assets/shared/social-media/Facebook.png"
-                            class="social-media-icon" alt/>
+                            class="social-media-icon" alt="Shelly Weasel Facebook"/>
                     </a>
-                    <a href="https://www.instagram.com/shelly_weasel/" target="_blank">
-                        <img src="@/assets/shared/social-media/Insta.png" class="social-media-icon" alt />
+                    <a href="https://www.instagram.com/shelly_weasel/"
+                        target="_blank" rel="noopener">
+                        <img src="@/assets/shared/social-media/Insta.png" 
+                        class="social-media-icon" alt="Shelly Weasel Instagram" />
                     </a>
-                    <a href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw" target="_blank">
+                    <a href="https://www.youtube.com/channel/UCE3ghabnFeqbEc3qKb6CZgw"
+                        target="_blank" rel="noopener">
                         <img src="@/assets/shared/social-media/Youtube.png"
-                            class="social-media-icon" alt/>
+                            class="social-media-icon" alt="Shelly Weasel YouTube"/>
                     </a>
                 </b-nav-text>
             </b-navbar-nav>
