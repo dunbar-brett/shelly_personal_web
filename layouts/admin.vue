@@ -4,6 +4,7 @@
       <Nav />
     </div>
     <nuxt />
+    <Footer/>
   </div>
 </template>
 
@@ -16,15 +17,9 @@ export default {
         Nav,
         Footer
     },
-    beforeMount() {
-        document.documentElement.style.overflow = 'hidden';
-    },
 }
 </script>
 
 <style lang="scss">
 @import '@/assets/scss/main.scss';
-.bad-hack {
-    overflow: hidden;
-}
 </style>
